@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:python_project/Aulas/Aula1.dart';
-import 'package:python_project/Dashboard/class.dart';
-import 'package:python_project/Dashboard/src/AulasDash.dart';
 import 'package:python_project/NavigationBar/NavigationBar.dart';
+import 'package:python_project/locator.dart';
+import 'package:python_project/routing/route_names.dart';
+import 'package:python_project/routing/router.dart';
+import 'package:python_project/services/navigation_services.dart';
 
 void main() {
+  setupLocator();
   runApp(MaterialApp(
     home: MyApp(),
   ));
@@ -20,7 +22,18 @@ class MyApp extends StatelessWidget {
         child: Stack(
           children: [
             NavigationBar(),
-            Class(),
+            Positioned(
+              left: 100,
+              child: Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width - 100,
+                child: Navigator(
+                  key: locator<NavigationService>().navigatorKey,
+                  onGenerateRoute: generateRoute,
+                  initialRoute: DashBoard,
+                ),
+              ),
+            ),
           ],
         ),
       ),

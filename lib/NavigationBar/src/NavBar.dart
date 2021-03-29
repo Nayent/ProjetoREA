@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:python_project/Dashboard/class.dart';
+import 'package:python_project/locator.dart';
+import 'package:python_project/routing/route_names.dart';
+import 'package:python_project/services/navigation_services.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -26,6 +30,7 @@ class _NavBarState extends State<NavBar> {
       child: Column(
         children: [
           NavBarItem(
+            navigationPath: DashBoard,
             active: selected[0],
             icon: FeatherIcons.home,
             touched: () {
@@ -35,6 +40,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           NavBarItem(
+            navigationPath: Aula_1,
             active: selected[1],
             icon: FeatherIcons.list,
             touched: () {
@@ -80,9 +86,15 @@ class NavBarItem extends StatefulWidget {
   final IconData icon;
   final Function touched;
   final bool active;
+  final String navigationPath;
 
-  const NavBarItem({Key key, this.icon, this.touched, this.active})
-      : super(key: key);
+  const NavBarItem({
+    Key key,
+    this.icon,
+    this.touched,
+    this.active,
+    this.navigationPath,
+  }) : super(key: key);
 
   @override
   _NavBarItemState createState() => _NavBarItemState();
@@ -95,6 +107,7 @@ class _NavBarItemState extends State<NavBarItem> {
       color: Colors.transparent,
       child: InkWell(
         onTap: () {
+          locator<NavigationService>().navigateTo(widget.navigationPath);
           widget.touched();
         },
         splashColor: Colors.white,
@@ -122,9 +135,10 @@ class _NavBarItemState extends State<NavBarItem> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 30.0),
-                      child: Icon(widget.icon,
-                      color: widget.active ? Colors.white : Colors.white54,
-                      size: 19.0,
+                      child: Icon(
+                        widget.icon,
+                        color: widget.active ? Colors.white : Colors.white54,
+                        size: 19.0,
                       ),
                     )
                   ],
