@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:python_project/Dashboard/class.dart';
 import 'package:python_project/locator.dart';
 import 'package:python_project/routing/route_names.dart';
 import 'package:python_project/services/navigation_services.dart';
@@ -30,7 +29,7 @@ class _NavBarState extends State<NavBar> {
       child: Column(
         children: [
           NavBarItem(
-            navigationPath: DashBoard,
+            navigationPath: Home,
             active: selected[0],
             icon: FeatherIcons.home,
             touched: () {
@@ -40,7 +39,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           NavBarItem(
-            navigationPath: Aula_1,
+            navigationPath: DashBoard,
             active: selected[1],
             icon: FeatherIcons.list,
             touched: () {
@@ -50,6 +49,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           NavBarItem(
+            navigationPath: Tela_1,
             active: selected[2],
             icon: FeatherIcons.folder,
             touched: () {
@@ -59,6 +59,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           NavBarItem(
+            navigationPath: Tela_2,
             active: selected[3],
             icon: FeatherIcons.messageSquare,
             touched: () {
@@ -68,6 +69,7 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           NavBarItem(
+            navigationPath: Tela_3,
             active: selected[4],
             icon: FeatherIcons.settings,
             touched: () {

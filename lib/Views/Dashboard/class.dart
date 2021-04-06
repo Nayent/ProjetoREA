@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:python_project/Dashboard/src/ProjectProgressCard.dart';
-import 'package:python_project/Dashboard/src/AulasDash.dart';
-import 'package:python_project/Dashboard/src/SubHeader.dart';
-import 'package:python_project/routing/route_names.dart';
-
-class Class extends StatelessWidget {
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
+import 'package:python_project/Views/Dashboard/src/AulasDash.dart';
+import 'package:python_project/Views/Dashboard/src/SubHeader.dart';
+class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,7 +37,7 @@ class Class extends StatelessWidget {
                     width: 30.0,
                   ),
                   ProjectProgressCard(
-                    color: Color(0xffFF4C60),
+                    color: Colors.redAccent,
                     projectName: 'Aula 1',
                     percentComplete: '34%',
                     progressIndicatorColor: Colors.redAccent[100],

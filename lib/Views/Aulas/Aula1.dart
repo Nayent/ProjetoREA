@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:python_project/locator.dart';
-import 'package:python_project/routing/route_names.dart';
-import 'package:python_project/services/navigation_services.dart';
 
 class Aula1 extends StatelessWidget {
   @override
@@ -43,7 +40,7 @@ class Aula1 extends StatelessWidget {
 }
 
 class ClassTitleText extends StatelessWidget {
-  String text;
+  final String text;
 
   ClassTitleText(this.text);
 
@@ -61,7 +58,7 @@ class ClassTitleText extends StatelessWidget {
 }
 
 class TitleText extends StatelessWidget {
-  String text;
+  final String text;
 
   TitleText(this.text);
 
@@ -79,7 +76,7 @@ class TitleText extends StatelessWidget {
 }
 
 class NormalText extends StatelessWidget {
-  String text;
+  final String text;
 
   NormalText(this.text);
 

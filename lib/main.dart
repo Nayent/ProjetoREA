@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                 child: Navigator(
                   key: locator<NavigationService>().navigatorKey,
                   onGenerateRoute: generateRoute,
-                  initialRoute: DashBoard,
+                  initialRoute: Home,
                 ),
               ),
             ),

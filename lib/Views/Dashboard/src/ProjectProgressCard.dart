@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:python_project/locator.dart';
-import 'package:python_project/routing/route_names.dart';
-import 'package:python_project/services/navigation_services.dart';
 
 class ProjectProgressCard extends StatefulWidget {
   final Color color;

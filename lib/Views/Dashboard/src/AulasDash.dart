@@ -39,7 +39,7 @@ class _AulasDashState extends State<AulasDash> {
       },
       child: InkWell(
         onTap: () {
-          showDialog(context: context, builder: (_) => AulaDialog(widget.title));
+          showDialog(context: context, builder: (_) => AulaDialog());
           print(widget.title);
         },
         child: AnimatedContainer(
@@ -124,11 +124,6 @@ class _AulasDashState extends State<AulasDash> {
 }
 
 class AulaDialog extends StatelessWidget {
-
-  String texto;
-
-  AulaDialog(this.texto);
-
   @override
   Widget build(BuildContext context) {
     return Dialog(
