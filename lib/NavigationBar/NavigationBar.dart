@@ -24,16 +24,16 @@ class _NavigationBarState extends State<NavigationBar> {
               alignment: Alignment.center,
               child: NavBar(),
             ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: NavBarItem(
-                icon: FeatherIcons.logOut,
-                active: false,
-                touched: () {
-                  print("Exit");
-                },
-              ),
-            ),
+            // Align(
+            //   alignment: Alignment.bottomCenter,
+            //   child: NavBarItem(
+            //     icon: FeatherIcons.logOut,
+            //     active: false,
+            //     touched: () {
+            //       print("Exit");
+            //     },
+            //   ),
+            // ),
           ],
         ),
       ),
