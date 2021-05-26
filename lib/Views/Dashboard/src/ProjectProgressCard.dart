@@ -4,13 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ProjectProgressCard extends StatefulWidget {
   final Color color;
-  final Color progressIndicatorColor;
   final String projectName;
   final String percentComplete;
   final String icon;
   ProjectProgressCard({
     this.color,
-    this.progressIndicatorColor,
     this.percentComplete,
     this.projectName,
     this.icon,
@@ -42,8 +40,8 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
           padding: EdgeInsets.only(right: 20.0),
           child: AnimatedContainer(
             duration: Duration(milliseconds: 275),
-            height: hovered ? 160.0 : 155.0,
-            width: hovered ? 200.0 : 195.0,
+            height: hovered ? 150.0 : 145.0,
+            width: hovered ? 180.0 : 175.0,
             decoration: BoxDecoration(
                 color: hovered ? widget.color : Colors.white,
                 borderRadius: BorderRadius.circular(15.0),
@@ -106,7 +104,7 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
                         ),
                       ),
                       SizedBox(
-                        width: 8.0,
+                        width: 10.0,
                       ),
                       Container(
                         child: Text(
@@ -151,44 +149,6 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
                         ),
                       ),
                     ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 8.0, left: 135.0),
-                    child: Text(
-                      widget.percentComplete,
-                      style: GoogleFonts.quicksand(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12.5,
-                        color: hovered ? Colors.white : Colors.black,
-                      ),
-                    ),
-                  ),
-                  AnimatedContainer(
-                    duration: Duration(milliseconds: 275),
-                    margin: EdgeInsets.only(top: 5.0),
-                    height: 6.0,
-                    width: 160.0,
-                    decoration: BoxDecoration(
-                      color: hovered
-                          ? widget.progressIndicatorColor
-                          : Color(0xffF5F6FA),
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: AnimatedContainer(
-                        duration: Duration(milliseconds: 275),
-                        height: 6.0,
-                        width: (double.parse(
-                                    widget.percentComplete.substring(0, 1)) /
-                                10) *
-                            160.0,
-                        decoration: BoxDecoration(
-                          color: hovered ? Colors.white : widget.color,
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                      ),
-                    ),
                   ),
                 ],
               ),

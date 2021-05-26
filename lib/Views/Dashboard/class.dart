@@ -40,55 +40,46 @@ class DashboardPage extends StatelessWidget {
                     color: Colors.redAccent,
                     projectName: 'Aula 1',
                     percentComplete: '34%',
-                    progressIndicatorColor: Colors.redAccent[100],
                   ),
                   ProjectProgressCard(
                     color: Color(0xff6C6CE5),
                     projectName: 'Aula 2',
                     percentComplete: '78%',
-                    progressIndicatorColor: Colors.blue[200],
                   ),
                   ProjectProgressCard(
                     color: Color(0xffFAAA1E),
                     projectName: 'Aula 3',
                     percentComplete: '82%',
-                    progressIndicatorColor: Colors.amber[200],
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
-                    progressIndicatorColor: Colors.green[200],
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
-                    progressIndicatorColor: Colors.green[200],
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
-                    progressIndicatorColor: Colors.green[200],
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
-                    progressIndicatorColor: Colors.green[200],
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
-                    progressIndicatorColor: Colors.green[200],
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
-                    progressIndicatorColor: Colors.green[200],
                   ),
                   SizedBox(
                     width: 30.0,
@@ -113,6 +104,7 @@ class DashboardPage extends StatelessWidget {
                       members: '28 members',
                       et: '10 Oct 2019',
                       fileSize: '2.3 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -121,6 +113,7 @@ class DashboardPage extends StatelessWidget {
                       members: '30 members',
                       et: '27 Sep 2019',
                       fileSize: '4.2 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -129,6 +122,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -137,6 +131,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -145,6 +140,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -153,6 +149,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -161,6 +158,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -169,6 +167,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -177,6 +176,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                     AulasDash(
                       title: "",
@@ -185,6 +185,7 @@ class DashboardPage extends StatelessWidget {
                       members: '14 members',
                       et: '08 Oct 2019',
                       fileSize: '1.6 MB',
+                      path: "aula1"
                     ),
                   ]),
                 ),

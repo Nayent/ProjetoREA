@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:python_project/services/navigation_services.dart';
+
+import '../../../locator.dart';
 
 class AulasDash extends StatefulWidget {
   final String sharedFileName;
@@ -8,6 +11,7 @@ class AulasDash extends StatefulWidget {
   final String et;
   final String fileSize;
   final String title;
+  final String path;
 
   AulasDash({
     this.color,
@@ -16,6 +20,7 @@ class AulasDash extends StatefulWidget {
     this.members,
     this.sharedFileName,
     this.title,
+    this.path,
   });
 
   @override
@@ -39,7 +44,7 @@ class _AulasDashState extends State<AulasDash> {
       },
       child: InkWell(
         onTap: () {
-          showDialog(context: context, builder: (_) => AulaDialog());
+          showDialog(context: context, builder: (_) => AulaDialog(widget.path));
           print(widget.title);
         },
         child: AnimatedContainer(
@@ -124,12 +129,29 @@ class _AulasDashState extends State<AulasDash> {
 }
 
 class AulaDialog extends StatelessWidget {
+  final String navigationPath;
+
+  const AulaDialog(this.navigationPath);
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
       child: Container(
         width: MediaQuery.of(context).size.width - 300,
         height: MediaQuery.of(context).size.height - 100,
+        child: Center(
+          child: Container(
+            width: 150,
+            height: 100,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+                locator<NavigationService>().navigateTo(this.navigationPath);
+              },
+              child: Text("Ir para Aula 1"),
+            ),
+          ),
+        ),
       ),
     );
   }

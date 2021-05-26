@@ -33,6 +33,7 @@ dependencies:
   google_fonts: ^2.0.0
   percent_indicator: "^2.1.7+2"
   get_it:
+  flutter_highlight: ^0.7.0
 
 dev_dependencies:
   flutter_test:
