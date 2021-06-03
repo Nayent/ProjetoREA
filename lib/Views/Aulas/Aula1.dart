@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_highlight/flutter_highlight.dart';
-import 'package:flutter_highlight/themes/default.dart';
+import 'package:python_project/services/images.dart';
+import 'package:python_project/services/txts.dart';
 
 class Aula1 extends StatelessWidget {
   @override
@@ -38,10 +37,8 @@ class Aula1 extends StatelessWidget {
             NormalText(
                 'Para a instalação e acesso do Python 2 no linux é bem simples, para isto tem-se os seguintes passos:'),
             NormalText('* Abra o prompt de comando e digite:'),
-            CodigoBash('\$ apt-get install python2'),
             CenterText(
                 'Para instalar o ambiente Python no sistema operacional Linux Ubuntu'),
-            CodigoBash('\$ python'),
             CenterText('Para acessar o ambiente Python pelo terminal'),
             TitleText('3) Exericícios Práticos'),
             NormalText(
@@ -63,12 +60,11 @@ XXXXX
 '''),
             TitleText('Gabarito'),
             NormalText('3.1)'),
-            CodigoPython('print(\'Ola mundo!\')'),
             NormalText(''),
-            CodigoTest('print(\'Ola mundo!\')'),
             NormalText(''),
             NormalText(
                 "Lorem ipsum est condimentum enim tortor proin nulla, habitasse netus tempus at erat inceptos, morbi per ad nisl rhoncus aliquet. ultrices amet nulla tempor curae volutpat ut taciti accumsan, velit nisl sollicitudin fermentum risus dolor sit, tellus rutrum torquent nisl fringilla faucibus sed. molestie inceptos velit class vel potenti libero purus tristique, dictum placerat libero rutrum integer erat amet tincidunt integer, sociosqu netus pretium tincidunt nec porta convallis. ornare ullamcorper quis ac potenti velit scelerisque curae pulvinar arcu, fames nunc tortor fermentum platea hendrerit senectus euismod, ante rhoncus justo quam ornare vitae mi malesuada."),
+            ImageCode('aula_12_1.png')
           ],
         ),
       ),
@@ -76,167 +72,3 @@ XXXXX
   }
 }
 
-class ClassTitleText extends StatelessWidget {
-  final String text;
-
-  ClassTitleText(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 24.0),
-      child: SelectableText(
-        text,
-        style:
-            GoogleFonts.quicksand(fontSize: 28.0, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
-
-class TitleText extends StatelessWidget {
-  final String text;
-
-  TitleText(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 24.0),
-      child: SelectableText(
-        text,
-        style:
-            GoogleFonts.quicksand(fontSize: 24.0, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
-
-class NormalText extends StatelessWidget {
-  final String text;
-
-  NormalText(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: SelectableText(
-        text,
-        style: GoogleFonts.quicksand(fontSize: 16.0),
-        textAlign: TextAlign.justify,
-      ),
-    );
-  }
-}
-
-class CenterText extends StatelessWidget {
-  final String text;
-
-  CenterText(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: Center(
-        child: Text(
-          text,
-          style: GoogleFonts.quicksand(fontSize: 16.0),
-          textAlign: TextAlign.justify,
-        ),
-      ),
-    );
-  }
-}
-
-class CodigoPython extends StatelessWidget {
-  final code;
-
-  CodigoPython(this.code);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 8.0, bottom: 16.0),
-      child: HighlightView(
-        // The original code to be highlighted
-        code,
-
-        // Specify language
-        // It is recommended to give it a value for performance
-        language: 'python',
-
-        // Specify highlight theme
-        // All available themes are listed in `themes` folder
-        theme: defaultTheme,
-
-        // Specify padding
-        padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-
-        // Specify text style
-        textStyle: TextStyle(
-          fontFamily: 'My awesome monospace font',
-          fontSize: 16,
-        ),
-      ),
-    );
-  }
-}
-
-class CodigoBash extends StatelessWidget {
-  final code;
-
-  CodigoBash(this.code);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 8.0, bottom: 16.0),
-      child: HighlightView(
-        // The original code to be highlighted
-        code,
-
-        // Specify language
-        // It is recommended to give it a value for performance
-        language: 'bash',
-
-        // Specify highlight theme
-        // All available themes are listed in `themes` folder
-        theme: defaultTheme,
-
-        // Specify padding
-        padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-
-        // Specify text style
-        textStyle: TextStyle(
-          fontFamily: 'My awesome monospace font',
-          fontSize: 16,
-        ),
-      ),
-    );
-  }
-}
-
-class CodigoTest extends StatelessWidget {
-  final code;
-
-  CodigoTest(this.code);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.only(top: 8.0, bottom: 16.0),
-        child: Container(
-          color: Colors.grey[200],
-          width: double.infinity,
-          child: SelectableText(
-            code,
-            style: TextStyle(
-              fontFamily: 'My awesome monospace font',
-              fontSize: 16,
-            ),
-          ),
-        ));
-  }
-}

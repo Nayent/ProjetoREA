@@ -187,6 +187,24 @@ class DashboardPage extends StatelessWidget {
                       fileSize: '1.6 MB',
                       path: "aula1"
                     ),
+                    AulasDash(
+                      title: "",
+                      color: Colors.red,
+                      sharedFileName: 'Aula 11 - Expressões e Variáveis',
+                      members: '14 members',
+                      et: '08 Oct 2019',
+                      fileSize: '1.6 MB',
+                      path: "aula1"
+                    ),
+                    AulasDash(
+                      title: "",
+                      color: Colors.red,
+                      sharedFileName: 'Aula 12 - Expressões e Variáveis',
+                      members: '14 members',
+                      et: '08 Oct 2019',
+                      fileSize: '1.6 MB',
+                      path: "aula12"
+                    ),
                   ]),
                 ),
               )),

@@ -148,7 +148,7 @@ class AulaDialog extends StatelessWidget {
                 Navigator.pop(context);
                 locator<NavigationService>().navigateTo(this.navigationPath);
               },
-              child: Text("Ir para Aula 1"),
+              child: Text("Ir para Aula"),
             ),
           ),
         ),

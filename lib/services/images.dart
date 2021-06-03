@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+class ImageCode extends StatelessWidget {
+  final image;
+
+  ImageCode(this.image);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+          margin: EdgeInsets.only(top: 30, bottom: 30),
+          width: 550,
+          color: Colors.white,
+          child: GestureDetector(
+              onTap: () async {
+                await showDialog(
+                    context: context,
+                    builder: (_) => ImageDialog('assets/' + image));
+              },
+              child: Center(child: Image.asset('assets/' + image)))),
+    );
+  }
+}
+
+class ImageDialog extends StatelessWidget {
+  final image;
+
+  ImageDialog(this.image);
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(child: Image.asset(image));
+  }
+}

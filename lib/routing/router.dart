@@ -1,4 +1,5 @@
 import 'package:python_project/Views/Aulas/Aula1.dart';
+import 'package:python_project/Views/Aulas/Aula12.dart';
 import 'package:python_project/Views/Dashboard/class.dart';
 import 'package:python_project/Views/Home/Home.dart';
 import 'package:python_project/Views/Tela_1/Tela_1.dart';
@@ -16,6 +17,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(DashboardPage());
     case Aula_1:
       return _getPageRoute(Aula1());
+    case Aula_12:
+      return _getPageRoute(Aula12());
     case Tela_1:
       return _getPageRoute(Tela1Page());
     case Tela_2:
