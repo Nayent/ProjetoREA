@@ -89,73 +89,73 @@ class DashboardPage extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(children: [
                     AulasDash(
-                      title: "Introdução ao Python",
+                      title: "Aula 1 - Introdução ao Python",
                       color: Colors.red,
-                      et: '10 Oct 2019',
+                      et: '1h30m',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "Configuração e Instalação das Ferramentas",
+                      title: "Aula 2 - Configuração e Instalação das Ferramentas",
                       color: Colors.blue,
                       et: '27 Sep 2019',
-                      path: "aula1"
+                      path: "aula2"
                     ),
                     AulasDash(
-                      title: "Hello World do Robô no Simulador",
+                      title: "Aula 3 - Hello World do Robô no Simulador",
                       color: Colors.amber,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula3"
                     ),
                     AulasDash(
-                      title: "Variáveis e Estruturas Condicionais",
+                      title: "Aula 4 - Variáveis e Estruturas Condicionais",
                       color: Colors.green,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula4"
                     ),
                     AulasDash(
-                      title: "Funções e Expressões Matemáticas",
+                      title: "Aula 5 - Funções e Expressões Matemáticas",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula5"
                     ),
                     AulasDash(
-                      title: "Teleoperação",
+                      title: "Aula 6 - Teleoperação",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula6"
                     ),
                     AulasDash(
-                      title: "Estruturas de repetição",
+                      title: "Aula 7 - Estruturas de repetição",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula7"
                     ),
                     AulasDash(
-                      title: "Arrays",
+                      title: "Aula 8 - Arrays",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula8"
                     ),
                     AulasDash(
-                      title: "Strings",
+                      title: "Aula 9 - Strings",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula9"
                     ),
                     AulasDash(
-                      title: "Modularização",
+                      title: "Aula 10 - Modularização",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula10"
                     ),
                     AulasDash(
-                      title: "Tratamento de erros e Exceções",
+                      title: "Aula 11 - Tratamento de erros e Exceções",
                       color: Colors.red,
                       et: '08 Oct 2019',
-                      path: "aula1"
+                      path: "aula11"
                     ),
                     AulasDash(
-                      title: "Arquivos",
+                      title: "Aula 12 - Arquivos",
                       color: Colors.red,
                       et: '08 Oct 2019',
                       path: "aula12"

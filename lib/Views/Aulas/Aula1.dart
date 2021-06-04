@@ -6,7 +6,7 @@ class Aula1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10.0, left: 40.0, right: 40.0),
+      padding: EdgeInsets.only(top: 10.0, left: 100.0, right: 100.0),
       color: Colors.white,
       width: MediaQuery.of(context).size.width - 100,
       height: MediaQuery.of(context).size.height,
