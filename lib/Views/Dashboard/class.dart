@@ -54,23 +54,23 @@ class DashboardPage extends StatelessWidget {
                   ),
                   ProjectProgressCard(
                     color: Colors.grey,
-                    projectName: 'Aula 4',
+                    projectName: 'Aula 5',
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
-                    projectName: 'Aula 4',
+                    projectName: 'Aula 6',
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
-                    projectName: 'Aula 4',
+                    projectName: 'Aula 7',
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
-                    projectName: 'Aula 4',
+                    projectName: 'Aula 8',
                   ),
                   ProjectProgressCard(
                     color: Colors.green,
-                    projectName: 'Aula 4',
+                    projectName: 'Aula 9',
                   ),
                   SizedBox(
                     width: 30.0,

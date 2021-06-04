@@ -1,4 +1,14 @@
 import 'package:python_project/Views/Aulas/Aula1.dart';
+import 'package:python_project/Views/Aulas/Aula2.dart';
+import 'package:python_project/Views/Aulas/Aula3.dart';
+import 'package:python_project/Views/Aulas/Aula4.dart';
+import 'package:python_project/Views/Aulas/Aula5.dart';
+import 'package:python_project/Views/Aulas/Aula6.dart';
+import 'package:python_project/Views/Aulas/Aula7.dart';
+import 'package:python_project/Views/Aulas/Aula8.dart';
+import 'package:python_project/Views/Aulas/Aula9.dart';
+import 'package:python_project/Views/Aulas/Aula10.dart';
+import 'package:python_project/Views/Aulas/Aula11.dart';
 import 'package:python_project/Views/Aulas/Aula12.dart';
 import 'package:python_project/Views/Dashboard/class.dart';
 import 'package:python_project/Views/Home/Home.dart';
@@ -17,6 +27,26 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(DashboardPage());
     case Aula_1:
       return _getPageRoute(Aula1());
+    case Aula_2:
+      return _getPageRoute(Aula2());
+    case Aula_3:
+      return _getPageRoute(Aula3());
+    case Aula_4:
+      return _getPageRoute(Aula4());
+    case Aula_5:
+      return _getPageRoute(Aula5());
+    case Aula_6:
+      return _getPageRoute(Aula6());
+    case Aula_7:
+      return _getPageRoute(Aula7());
+    case Aula_8:
+      return _getPageRoute(Aula8());
+    case Aula_9:
+      return _getPageRoute(Aula9());
+    case Aula_10:
+      return _getPageRoute(Aula10());
+    case Aula_11:
+      return _getPageRoute(Aula11());
     case Aula_12:
       return _getPageRoute(Aula12());
     case Tela_1:

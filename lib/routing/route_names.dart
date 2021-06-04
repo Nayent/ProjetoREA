@@ -1,6 +1,16 @@
 const String Home = 'home';
 const String DashBoard = 'dashboard';
 const String Aula_1 = 'aula1';
+const String Aula_2 = 'aula2';
+const String Aula_3 = 'aula3';
+const String Aula_4 = 'aula4';
+const String Aula_5 = 'aula5';
+const String Aula_6 = 'aula6';
+const String Aula_7 = 'aula7';
+const String Aula_8 = 'aula8';
+const String Aula_9 = 'aula9';
+const String Aula_10 = 'aula10';
+const String Aula_11 = 'aula11';
 const String Aula_12 = 'aula12';
 const String Tela_1 = 'tela1';
 const String Tela_2 = 'tela2';
