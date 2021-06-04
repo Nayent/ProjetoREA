@@ -37,17 +37,17 @@ class DashboardPage extends StatelessWidget {
                     width: 30.0,
                   ),
                   ProjectProgressCard(
-                    color: Colors.redAccent,
+                    color: Colors.red,
                     projectName: 'Aula 1',
                     percentComplete: '34%',
                   ),
                   ProjectProgressCard(
-                    color: Color(0xff6C6CE5),
+                    color: Colors.blue,
                     projectName: 'Aula 2',
                     percentComplete: '78%',
                   ),
                   ProjectProgressCard(
-                    color: Color(0xffFAAA1E),
+                    color: Colors.amber,
                     projectName: 'Aula 3',
                     percentComplete: '82%',
                   ),
@@ -57,7 +57,7 @@ class DashboardPage extends StatelessWidget {
                     percentComplete: '90%',
                   ),
                   ProjectProgressCard(
-                    color: Colors.green,
+                    color: Colors.grey,
                     projectName: 'Aula 4',
                     percentComplete: '90%',
                   ),
@@ -98,111 +98,75 @@ class DashboardPage extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(children: [
                     AulasDash(
-                      title: "",
+                      title: "Introdução ao Python",
                       color: Colors.red,
-                      sharedFileName: 'Aula 1 - Introdução ao Python',
-                      members: '28 members',
                       et: '10 Oct 2019',
-                      fileSize: '2.3 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Configuração e Instalação das Ferramentas",
                       color: Colors.blue,
-                      sharedFileName: 'Aula 2 - Hello World',
-                      members: '30 members',
                       et: '27 Sep 2019',
-                      fileSize: '4.2 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Hello World do Robô no Simulador",
                       color: Colors.amber,
-                      sharedFileName: 'Aula 3 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Variáveis e Estruturas Condicionais",
                       color: Colors.green,
-                      sharedFileName: 'Aula 4 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Funções e Expressões Matemáticas",
                       color: Colors.red,
-                      sharedFileName: 'Aula 5 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Teleoperação",
                       color: Colors.red,
-                      sharedFileName: 'Aula 6 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Estruturas de repetição",
                       color: Colors.red,
-                      sharedFileName: 'Aula 7 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Arrays",
                       color: Colors.red,
-                      sharedFileName: 'Aula 8 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Strings",
                       color: Colors.red,
-                      sharedFileName: 'Aula 9 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Modularização",
                       color: Colors.red,
-                      sharedFileName: 'Aula 10 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Tratamento de erros e Exceções",
                       color: Colors.red,
-                      sharedFileName: 'Aula 11 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula1"
                     ),
                     AulasDash(
-                      title: "",
+                      title: "Arquivos",
                       color: Colors.red,
-                      sharedFileName: 'Aula 12 - Expressões e Variáveis',
-                      members: '14 members',
                       et: '08 Oct 2019',
-                      fileSize: '1.6 MB',
                       path: "aula12"
                     ),
                   ]),

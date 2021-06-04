@@ -5,20 +5,14 @@ import 'package:python_project/services/navigation_services.dart';
 import '../../../locator.dart';
 
 class AulasDash extends StatefulWidget {
-  final String sharedFileName;
   final Color color;
-  final String members;
   final String et;
-  final String fileSize;
   final String title;
   final String path;
 
   AulasDash({
     this.color,
     this.et,
-    this.fileSize,
-    this.members,
-    this.sharedFileName,
     this.title,
     this.path,
   });
@@ -45,7 +39,6 @@ class _AulasDashState extends State<AulasDash> {
       child: InkWell(
         onTap: () {
           showDialog(context: context, builder: (_) => AulaDialog(widget.path));
-          print(widget.title);
         },
         child: AnimatedContainer(
           duration: Duration(milliseconds: 275),
@@ -78,11 +71,11 @@ class _AulasDashState extends State<AulasDash> {
                           height: 28.0,
                           width: 28.0,
                           decoration: BoxDecoration(
-                            color: widget.color.withOpacity(0.2),
+                            color: widget.color.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(5.0),
                           ),
                           child: Center(
-                            child: Text(widget.title,
+                            child: Text('',
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15.0,
@@ -93,7 +86,7 @@ class _AulasDashState extends State<AulasDash> {
                           width: 15.0,
                         ),
                         Text(
-                          widget.sharedFileName,
+                          widget.title,
                           style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.bold,
                             fontSize: 12.0,

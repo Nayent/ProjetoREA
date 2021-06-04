@@ -13,23 +13,7 @@ class ImageCode extends StatelessWidget {
           width: 550,
           color: Colors.white,
           child: GestureDetector(
-              onTap: () async {
-                await showDialog(
-                    context: context,
-                    builder: (_) => ImageDialog('assets/' + image));
-              },
               child: Center(child: Image.asset('assets/' + image)))),
     );
-  }
-}
-
-class ImageDialog extends StatelessWidget {
-  final image;
-
-  ImageDialog(this.image);
-
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(child: Image.asset(image));
   }
 }
