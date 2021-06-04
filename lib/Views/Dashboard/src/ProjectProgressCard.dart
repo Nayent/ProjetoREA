@@ -5,11 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 class ProjectProgressCard extends StatefulWidget {
   final Color color;
   final String projectName;
-  final String percentComplete;
   final String icon;
   ProjectProgressCard({
     this.color,
-    this.percentComplete,
     this.projectName,
     this.icon,
   });
