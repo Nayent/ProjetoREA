@@ -89,6 +89,12 @@ class DashboardPage extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(children: [
                     AulasDash(
+                      title: "Aula 0 - Apresentação do Curso",
+                      color: Colors.red,
+                      et: '1h30m',
+                      path: "aula0"
+                    ),
+                    AulasDash(
                       title: "Aula 1 - Introdução ao Python",
                       color: Colors.red,
                       et: '1h30m',

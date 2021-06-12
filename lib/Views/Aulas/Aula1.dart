@@ -16,7 +16,7 @@ class Aula1 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClassTitleText("Aula 1 - Introdução à Python"),
-            TitleText("1) Apresentação da Linguagem"),
+            TitleText("Apresentação da Linguagem"),
             NormalText(
                 'A linguagem de programação Python deu-se início em 1991 pelo matemático e programador de computadores holandês Guido Van Rossumem, com o intuito de desenvolver uma linguagem fácil e intuitiva e também, tão poderosa quanto as outras linguagens concorrentes da época.'),
             NormalText(
@@ -31,15 +31,12 @@ class Aula1 extends StatelessWidget {
                 'Além da facilidade em desenvolver algo em Python, lê-lo também é simples, de tal forma que, uma das principais características que diferencia esta linguagem de outras, é a legibilidade dos programas escritos. Este item é muito importante pois é voltado principalmente para onde tem-se mais de um desenvolvedor atuando, assim, sendo simples de entender o que a outra pessoa escreveu e qual era o objetivo daquela linha de código.'),
             NormalText(
                 'Deste modo, com a simplicidade, legibilidade, poderosas bibliotecas fazem da linguagem Python uma das linguagens mais usadas atualmente e, para finalizar, segue um trecho do Zen do Python:'),
-            NormalText(
+            ItalicText(
                 '  O Belo é melhor do que feio.\n  Explícito é melhor do que implícito.\n  Simples é melhor que complexo.\n  Complexo é melhor do que complicado.\n  A legibilidade conta.'),
-            TitleText('2) Instalação do Software'),
+            TitleText('Instalação do Software'),
             NormalText(
-                'Para a instalação e acesso do Python 2 no linux é bem simples, para isto tem-se os seguintes passos:'),
-            NormalText('* Abra o prompt de comando e digite:'),
-            CenterText(
-                'Para instalar o ambiente Python no sistema operacional Linux Ubuntu'),
-            CenterText('Para acessar o ambiente Python pelo terminal'),
+                'Para a instalação e acesso do Python 2 no linux é bem simples, para isto abra o terminal (prompt de comando) e siga os seguintes passos:'),
+            ImageCode('aula_1_1.png'),
             TitleText('3) Exericícios Práticos'),
             NormalText(
                 '3.1) Crie um programa que imprima "Olá Mundo!" em Python'),

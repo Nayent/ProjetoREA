@@ -1,5 +1,6 @@
 const String Home = 'home';
 const String DashBoard = 'dashboard';
+const String Aula_0 = 'aula0';
 const String Aula_1 = 'aula1';
 const String Aula_2 = 'aula2';
 const String Aula_3 = 'aula3';
