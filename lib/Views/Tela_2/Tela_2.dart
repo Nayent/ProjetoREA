@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'Aula0.dart';
 
 class Tela2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Tela 2"),
-    );
+    return Aula0();
   }
 }

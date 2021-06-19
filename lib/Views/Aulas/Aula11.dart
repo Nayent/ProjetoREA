@@ -15,7 +15,7 @@ class Aula11 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClassTitleText("Aula 11 - Tratamento de erros e Exceções"),
+            ClassTitleText("Aula 9 - Tratamento de erros e Exceções"),
             TitleText(""),
             NormalText(''),
           ],

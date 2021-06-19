@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:python_project/services/images.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula0 extends StatelessWidget {
@@ -15,7 +14,6 @@ class Aula0 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClassTitleText("Aula 0 - Apresentação do Curso"),
             TitleText("Apresentação do Curso"),
             NormalText('O ensino de algoritmos envolve teoria e prática de laboratório em instituições de ensino superior. Cabe ao docente elaborar material didático de uma ampla gama de recursos da literatura e de sua experiência profissional e pessoal para conseguir abranger atividades práticas, aprimorar o entendimento do estudante e aumentar o interesse pelo conteúdo. Alternativas complementares utilizadas nas aulas são materiais complementares de ensino apoiado por ferramentas educacionais eletrônicas, e a apresentação para os estudantes de casos de uso prático que envolve a linguagem de programação. A montagem de um ambiente virtual de ensino dedicado tem elevado custo e exige comprometimento para a manutenção e atualização periódica do ambiente. Além disso, o ambiente de ensino convencional é restrito ao local físico onde as aulas são ministradas. '),
             NormalText('Esse projeto pretende realizar o desenvolvimento de Recursos Educacionais Abertos (REA) para o ensino complementar de linguagem de programação procedimental com a linguagem Python aplicada a problemas de robótica educacional.'),

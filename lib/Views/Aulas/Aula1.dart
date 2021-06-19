@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
 import 'package:python_project/services/txts.dart';
 
@@ -31,37 +32,67 @@ class Aula1 extends StatelessWidget {
                 'Além da facilidade em desenvolver algo em Python, lê-lo também é simples, de tal forma que, uma das principais características que diferencia esta linguagem de outras, é a legibilidade dos programas escritos. Este item é muito importante pois é voltado principalmente para onde tem-se mais de um desenvolvedor atuando, assim, sendo simples de entender o que a outra pessoa escreveu e qual era o objetivo daquela linha de código.'),
             NormalText(
                 'Deste modo, com a simplicidade, legibilidade, poderosas bibliotecas fazem da linguagem Python uma das linguagens mais usadas atualmente e, para finalizar, segue um trecho do Zen do Python:'),
-            ItalicText(
-                '  O Belo é melhor do que feio.\n  Explícito é melhor do que implícito.\n  Simples é melhor que complexo.\n  Complexo é melhor do que complicado.\n  A legibilidade conta.'),
+            CenterItalicText(
+                '  O Belo é melhor do que feio.\n  Explícito é melhor do que implícito.\n  Simples é melhor que complexo.\n  Complexo é melhor do que complicado.\n  A legibilidade conta.\n  (...)'),
             TitleText('Instalação do Software'),
             NormalText(
                 'Para a instalação e acesso do Python 2 no linux é bem simples, para isto abra o terminal (prompt de comando) e siga os seguintes passos:'),
             ImageCode('aula_1_1.png'),
-            TitleText('3) Exericícios Práticos'),
-            NormalText(
-                '3.1) Crie um programa que imprima "Olá Mundo!" em Python'),
-            NormalText('3.2) Crie um programa que imprima o seu nome'),
-            NormalText(
-                '3.3) Dado um conjunto de números inteiros [3,4,6,9,15], imprima o número primo'),
-            NormalText(
-                '3.4) Imprima a sequência de números do exercício anterior'),
-            NormalText(
-                '3.5) Faça um programa que nos mostre seu nome e sua idade da seguinte forma'),
-            NormalText('3.6) Mostre o Zen do Python'),
-            NormalText('3.7) Faça um código que faça esta imagem'),
-            NormalText('''XXXXX
-X       X
-X       X
-X       X
-XXXXX
-'''),
-            TitleText('Gabarito'),
-            NormalText('3.1)'),
+            NormalText('Após instalado rode o seguinte código:'),
+            ImageCode('aula_1_2.png'),
+            NormalText('Com isso feito, o ambiente do python 2 está pronto para ser utilizado e também para seguir com o curso.'),
             NormalText(''),
-            NormalText(''),
-            NormalText(
-                "Lorem ipsum est condimentum enim tortor proin nulla, habitasse netus tempus at erat inceptos, morbi per ad nisl rhoncus aliquet. ultrices amet nulla tempor curae volutpat ut taciti accumsan, velit nisl sollicitudin fermentum risus dolor sit, tellus rutrum torquent nisl fringilla faucibus sed. molestie inceptos velit class vel potenti libero purus tristique, dictum placerat libero rutrum integer erat amet tincidunt integer, sociosqu netus pretium tincidunt nec porta convallis. ornare ullamcorper quis ac potenti velit scelerisque curae pulvinar arcu, fames nunc tortor fermentum platea hendrerit senectus euismod, ante rhoncus justo quam ornare vitae mi malesuada."),
-            ImageCode('aula_12_1.png')
+            ClassTitleText('Exercícios'),
+            Container(
+            margin: EdgeInsets.only(top: 5.0),
+            height: 200.0,
+            width: MediaQuery.of(context).size.width - 100,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 30.0,
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.red,
+                    projectName: 'Exercicio 1',
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.blue,
+                    projectName: 'Exercicio 2',
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.amber,
+                    projectName: 'Exercicio 3',
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.green,
+                    projectName: 'Exercicio 4',
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.grey,
+                    projectName: 'Exercicio 5',
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.green,
+                    projectName: 'Exercicio 6',
+                  ),
+                  ProjectProgressCard(
+                    color: Colors.green,
+                    projectName: 'Exercicio 7',
+                  ),
+                  SizedBox(
+                    width: 30.0,
+                  )
+                ],
+              ),
+            ),
+          ),
+          NormalText(''),
+          NormalText(''),
           ],
         ),
       ),

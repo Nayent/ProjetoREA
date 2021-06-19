@@ -150,3 +150,23 @@ class HyperText extends StatelessWidget {
     );
   }
 }
+
+class CenterItalicText extends StatelessWidget {
+  final String text;
+
+  CenterItalicText(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
+      child: Center(
+        child: SelectableText(
+          text,
+          style: GoogleFonts.quicksand(fontSize: 16.0, fontStyle: FontStyle.italic),
+          textAlign: TextAlign.justify,
+        ),
+      ),
+    );
+  }
+}

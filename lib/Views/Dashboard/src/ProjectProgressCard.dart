@@ -32,7 +32,7 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
       },
       child: InkWell(
         onTap: () {
-          print(widget.projectName);
+          showDialog(context: context, builder: (_) => AulaDialog(widget.projectName));
         },
         child: Padding(
           padding: EdgeInsets.only(right: 20.0),
@@ -152,6 +152,25 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class AulaDialog extends StatelessWidget {
+  final String navigationPath;
+
+  const AulaDialog(this.navigationPath);
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      child: Container(
+        width: MediaQuery.of(context).size.width - 500,
+        height: MediaQuery.of(context).size.height - 100,
+        child: Center(
+          child: Text(navigationPath)
         ),
       ),
     );

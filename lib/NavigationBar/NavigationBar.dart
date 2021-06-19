@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/NavigationBar/src/Logo.dart';
 import 'package:python_project/NavigationBar/src/NavBar.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class NavigationBar extends StatefulWidget {
   @override

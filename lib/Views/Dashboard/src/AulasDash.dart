@@ -42,7 +42,7 @@ class _AulasDashState extends State<AulasDash> {
         },
         child: AnimatedContainer(
           duration: Duration(milliseconds: 275),
-          margin: EdgeInsets.only(bottom: 10.0, left: 40.0, right: 15.0),
+          margin: EdgeInsets.only(bottom: 10.0, left: 40.0, right: 40.0),
           padding: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
               color: Colors.white,
@@ -89,7 +89,7 @@ class _AulasDashState extends State<AulasDash> {
                           widget.title,
                           style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.bold,
-                            fontSize: 12.0,
+                            fontSize: 14.0,
                           ),
                         ),
                       ],
@@ -103,7 +103,7 @@ class _AulasDashState extends State<AulasDash> {
                             widget.et,
                             style: GoogleFonts.quicksand(
                               fontWeight: FontWeight.bold,
-                              fontSize: 11.0,
+                              fontSize: 12.0,
                               color: Colors.black45,
                             ),
                           ),

@@ -71,7 +71,7 @@ class _NavBarState extends State<NavBar> {
           NavBarItem(
             navigationPath: Tela_3,
             active: selected[4],
-            icon: FeatherIcons.settings,
+            icon: Icons.people_alt_rounded,
             touched: () {
               setState(() {
                 select(4);
