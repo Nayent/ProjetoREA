@@ -141,7 +141,7 @@ class HyperText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: InkWell(
-        child: SelectableText(
+        child: Text(
           '       ' + text,
           style: GoogleFonts.quicksand(fontSize: 16.0, color: Colors.blue),
         ),

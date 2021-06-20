@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula3 extends StatelessWidget {
@@ -64,6 +65,21 @@ class Aula3 extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class PlanoAula3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula3',
+      aula: 'Aula 3',
+      tituloAula: 'Hello World do Robô no Simulador',
+      conteudoRelacionado: 'Programação em Python com o Simulador',
+      resumo: 'Apresentação das estruturas de repetição.',
+      objetivos: 'Nesta aula, iniciaremos com a função “print” da programação que irá imprimir algo que desejamos no nosso programa e, em seguida, o funcionamento do simulador em que utilizaremos como base neste curso para então, resolvermos alguns exercícios no próprio simulador com base na linguagem Python,',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }

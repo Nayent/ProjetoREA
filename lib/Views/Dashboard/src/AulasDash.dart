@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:python_project/services/navigation_services.dart';
-
-import '../../../locator.dart';
 
 class AulasDash extends StatefulWidget {
   final Color color;
   final String et;
   final String title;
-  final String path;
+  final path;
 
   AulasDash({
     this.color,
@@ -122,29 +119,28 @@ class _AulasDashState extends State<AulasDash> {
 }
 
 class AulaDialog extends StatelessWidget {
-  final String navigationPath;
+  final planoAula;
 
-  const AulaDialog(this.navigationPath);
+  const AulaDialog(this.planoAula);
 
   @override
   Widget build(BuildContext context) {
+
+    double width = 1500.0;
+    double height = 622.0;
+
+    if(MediaQuery.of(context).size.width - 300 < width){
+      width = MediaQuery.of(context).size.width - 300;
+    }
+    if(MediaQuery.of(context).size.height - 100 < height){
+      height = MediaQuery.of(context).size.width - 100;
+    }
+
     return Dialog(
       child: Container(
-        width: MediaQuery.of(context).size.width - 300,
-        height: MediaQuery.of(context).size.height - 100,
-        child: Center(
-          child: Container(
-            width: 150,
-            height: 100,
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-                locator<NavigationService>().navigateTo(this.navigationPath);
-              },
-              child: Text("Ir para Aula"),
-            ),
-          ),
-        ),
+        width: width,
+        height: height,
+        child: planoAula,
       ),
     );
   }

@@ -39,6 +39,16 @@ class _NavBarState extends State<NavBar> {
             },
           ),
           NavBarItem(
+            navigationPath: Tela_2,
+            active: selected[3],
+            icon: FeatherIcons.messageSquare,
+            touched: () {
+              setState(() {
+                select(3);
+              });
+            },
+          ),
+          NavBarItem(
             navigationPath: DashBoard,
             active: selected[1],
             icon: FeatherIcons.list,
@@ -55,16 +65,6 @@ class _NavBarState extends State<NavBar> {
             touched: () {
               setState(() {
                 select(2);
-              });
-            },
-          ),
-          NavBarItem(
-            navigationPath: Tela_2,
-            active: selected[3],
-            icon: FeatherIcons.messageSquare,
-            touched: () {
-              setState(() {
-                select(3);
               });
             },
           ),

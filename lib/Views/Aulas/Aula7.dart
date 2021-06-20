@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula7 extends StatelessWidget {
@@ -15,35 +16,60 @@ class Aula7 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClassTitleText("Aula 6 - Estruturas de repetição"),
-            TitleText("Estruturas de repetição"),
-            NormalText('A esta altura, pode-se perceber que há pontos no código em que necessita-se repetir o mesmo código várias vezes e, para simplificar e otimizar o programa, utiliza-se as estruturas de repetição. Mais especificamente, essas estruturas são utilizadas quando deseja-se executar um determinado bloco de código a partir de uma determinada condição.'),
-            NormalText('Um exemplo simples poderia ser um programa que mostra os números inteiros de 1 a 5. Ao invés de irmos escrevendo “print” por “print” de cada valor de 1 à 5, pode-se utilizar um loop em que tem-se uma variável base “x”, que começará em 1 e terminará no 5, dando saltos de 1 em 1. Por fim, o código nos retornará - em cada volta do loop - o valor da nossa variável.'),
-            NormalText('Para exemplificar tem-se:'),
+            ClassTitleText("Aula 7 - Arrays"),
+            TitleText("Listas"),
+            NormalText('Uma lista nada mais é do que uma variável que armazena uma sequência de itens. Por exemplo:'),
             ImageCode('aula_7_1.png'),
-            NormalText('Com isso, tem-se que, em cada laço do loop, o “x” assumirá um valor que será mostrado em seguida.'),
-            NormalText('As estruturas de repetição são o FOR e o WHILE. O “for” é mais utilizado para iterar um bloco de código determinadas vezes. No  “While” utiliza-se em sua maioria quando deseja-se que um determinado bloco de código seja repetido até que uma condição seja satisfeita. '),
-            TitleText('FOR'),
-            NormalText('A estrutura do FOR no python é a seguinte:'),
+            NormalText('É utilizado colchetes [] para inicializá-la, e também para acessar os valores dentro da mesma, utilizando o index, sempre começando em 0. por exemplo:'),
             ImageCode('aula_7_2.png'),
-            NormalText('Exemplificando para ficar mais fácil de entender:'),
             ImageCode('aula_7_3.png'),
-            NormalText('A função range() nos dá um limite, sendo passado 3 parâmetros,'),
+            NormalText('Para entender melhor as posições de um array, a imagem abaixo irá nos auxiliar:'),
             ImageCode('aula_7_4.png'),
-            NormalText('Porém por padrão o valor inicial é zero e o intervalo é 1, não sendo obrigatório o preenchimento dos mesmos, adicionando apenas quando for utilizar um valor diferente do padrão.'),
-            TitleText('WHILE'),
-            NormalText('A estrutura do WHILE no python é a seguinte:'),
+            NormalText('Nas listas, não é preciso apenas armazenar valores do mesmo tipo, é possível conter todos os tipos dentro. Por exemplo:'),
             ImageCode('aula_7_5.png'),
-            NormalText('Sendo que sempre irá repetir quando a condição for verdadeira, caso seja falsa ele encerra o loop.'),
-            NormalText('Um exemplo abaixo para ter a mesma saída do exemplo utilizando o for:'),
+            NormalText('As listas são mutáveis, logo, podemos adicionar, remover e alterar os seus valores.'),
+            SubtitleText('    Incluir valores no final da lista'),
             ImageCode('aula_7_6.png'),
-            NormalText('Lembrando que tanto na função range(), quanto na condição “contador < 6”, o valor do contador não chega em 6, sempre irá para um antes, caso queira utilizar o próximo valor deve-se usar:'),
-            NormalText('  range(7)'),
-            NormalText('  contador <= 6'),
+            SubtitleText('    Incluir valor na posição desejada'),
+            ImageCode('aula_7_7.png'),
+            SubtitleText('    Alterar valor'),
+            ImageCode('aula_7_8.png'),
+            SubtitleText('    Deletar elemento'),
+            ImageCode('aula_7_9.png'),
+            NormalText('Para selecionar um intervalo dentro da lista, fazemos o seguinte:'),
+            ImageCode('aula_7_10.png'),
+            TitleText("Tuplas"),
+            NormalText('Uma tupla é basicamente uma lista, possuindo a mesma estrutura, porém, uma tupla é imutável, ou seja, após declarada, não é possível alterar seus valores.'),
+            NormalText('Para declarar uma tupla, utilizamos os parênteses.'),
+            ImageCode('aula_7_11.png'),
+            TitleText("Dicionários"),
+            NormalText('Os dicionários também são parecidos com listas, porém servem para armazenar dados em par, sendo uma chave e um valor. Para declarar um dicionário é utilizado chaves. Por exemplo:'),
+            ImageCode('aula_7_12.png'),
+            NormalText('Exemplo prático:'),
+            ImageCode('aula_7_13.png'),
+            NormalText('No exemplo acima é possível ver que foi salvo diversas informações a respeito de um filme, tudo em apenas um lugar.'),
+            NormalText('Para buscar um valor no dicionário utilizamos o valor da chave, por exemplo:'),
+            ImageCode('aula_7_14.png'),
             NormalText(''),
           ],
         ),
       ),
+    );
+  }
+}
+
+
+class PlanoAula7 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula7',
+      aula: 'Aula 7',
+      tituloAula: 'Arrays',
+      conteudoRelacionado: 'Apresentação dos Arrays, sendo eles Tuplas, Listas e Dicionário.',
+      resumo: 'Nesta aula será apresentado os Arrays que, em suma, são lista de objetos que contém múltiplos valores armazenados em sequência. Este objeto array tem um diferencial que é a possibilidade de acessar cada valor interno individualmente. Deste modo, sendo extremamente úteis e tornam eficiente o código.',
+      objetivos: 'Apresentar de forma simples e direta o entendimento sobre os Arrays e demonstrar sua utilização e o quanto facilitam no desenvolvimento do código. Por fim, tem-se exercícios práticos juntamente com o simulador a fim de reforçar o conteúdo, demonstrando na prática suas utilizações.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }

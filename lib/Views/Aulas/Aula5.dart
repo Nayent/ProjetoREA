@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula5 extends StatelessWidget {
@@ -48,6 +49,22 @@ class Aula5 extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+
+class PlanoAula5 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula5',
+      aula: 'Aula 5',
+      tituloAula: 'Funções e Expressões Matemáticas',
+      conteudoRelacionado: 'Programação em Python com o Simulador',
+      resumo: 'Esta aula iremos apresentar como criar funções em Python e mostrar como funciona as funções matemáticas no Python.',
+      objetivos: 'O objetivo é iniciar o estudante na modularização do código. Os exercícios práticos também apresentam exemplos de cálculos em funções com interação com o robô no simulador.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }

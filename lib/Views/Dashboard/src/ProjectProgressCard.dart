@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:python_project/services/txts.dart';
 
 class ProjectProgressCard extends StatefulWidget {
   final Color color;
   final String projectName;
-  final String icon;
-  ProjectProgressCard({
-    this.color,
-    this.projectName,
-    this.icon,
-  });
+  final String exercicio;
+  final String gabarito;
+  final String time;
+  final String dif;
+
+  ProjectProgressCard(this.color, this.projectName, this.exercicio,
+      this.gabarito, this.time, this.dif);
   @override
   _ProjectProgressCardState createState() => _ProjectProgressCardState();
 }
@@ -32,7 +34,10 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
       },
       child: InkWell(
         onTap: () {
-          showDialog(context: context, builder: (_) => AulaDialog(widget.projectName));
+          showDialog(
+              context: context,
+              builder: (_) => AulaDialog(
+                  widget.exercicio, widget.projectName, widget.gabarito));
         },
         child: Padding(
           padding: EdgeInsets.only(right: 20.0),
@@ -106,7 +111,7 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
                       ),
                       Container(
                         child: Text(
-                          '10 Exercícios',
+                          widget.dif,
                           style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.w500,
                             fontSize: 10.0,
@@ -138,7 +143,7 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
                       ),
                       Container(
                         child: Text(
-                          '30m',
+                          widget.time,
                           style: GoogleFonts.quicksand(
                             fontWeight: FontWeight.w500,
                             fontSize: 10.0,
@@ -159,9 +164,13 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
 }
 
 class AulaDialog extends StatelessWidget {
-  final String navigationPath;
+  bool _visible = false;
 
-  const AulaDialog(this.navigationPath);
+  final String exercicioNumber;
+  final String exercicio;
+  final String gabarito;
+
+  AulaDialog(this.exercicio, this.exercicioNumber, this.gabarito);
 
   @override
   Widget build(BuildContext context) {
@@ -169,10 +178,74 @@ class AulaDialog extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width - 500,
         height: MediaQuery.of(context).size.height - 100,
-        child: Center(
-          child: Text(navigationPath)
+        child: Padding(
+          padding: const EdgeInsets.only(
+              top: 30.0, left: 30.0, right: 30.0, bottom: 0.0),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            TitleText(exercicioNumber),
+            SubtitleText(exercicio),
+            Gabarito(gabarito),
+          ]),
         ),
       ),
+    );
+  }
+}
+
+class Gabarito extends StatefulWidget {
+  final String gabarito;
+
+  Gabarito(this.gabarito);
+
+  @override
+  _GabaritoState createState() => _GabaritoState();
+}
+
+class _GabaritoState extends State<Gabarito> {
+  bool _toggled = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SwitchListTile(
+          title: Text('Gabarito',
+              style:
+                  GoogleFonts.quicksand(fontSize: 16.0, color: Colors.purple)),
+          value: _toggled,
+          activeColor: Colors.purple,
+          inactiveTrackColor: Colors.grey,
+          onChanged: (bool value) {
+            setState(() {
+              _toggled = value;
+              if (_toggled == false) {}
+            });
+          },
+        ),
+        SizedBox(
+          height: 10.0,
+        ),
+        Opacity(
+          opacity: _toggled ? 1.0 : 0.0,
+          child: Container(
+            width: double.infinity,
+            color: Colors.grey[100],
+            child: Container(
+              margin: EdgeInsets.all(8.0),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SelectableText(
+                      widget.gabarito,
+                      style: GoogleFonts.quicksand(fontSize: 16.0),
+                    ),
+                  ]),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

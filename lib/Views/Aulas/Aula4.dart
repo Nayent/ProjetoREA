@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula4 extends StatelessWidget {
@@ -136,6 +137,21 @@ class Aula4 extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class PlanoAula4 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula4',
+      aula: 'Aula 4',
+      tituloAula: 'Variáveis e Estruturas Condicionais',
+      conteudoRelacionado: '',
+      resumo: 'Nesta aula veremos sobre Variáveis e Estruturas Condicionais',
+      objetivos: 'O objetivo desta aula é apresentar os conceitos de variáveis e estruturas condicionais SE-ENTÃO em Python. Serão apresentados exemplos práticos de uso desses conceitos com experimentação robótica no simulador.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }

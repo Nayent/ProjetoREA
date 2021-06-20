@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula1 extends StatelessWidget {
@@ -40,59 +41,94 @@ class Aula1 extends StatelessWidget {
             ImageCode('aula_1_1.png'),
             NormalText('Após instalado rode o seguinte código:'),
             ImageCode('aula_1_2.png'),
-            NormalText('Com isso feito, o ambiente do python 2 está pronto para ser utilizado e também para seguir com o curso.'),
+            NormalText(
+                'Com isso feito, o ambiente do python 2 está pronto para ser utilizado e também para seguir com o curso.'),
             NormalText(''),
             ClassTitleText('Exercícios'),
             Container(
-            margin: EdgeInsets.only(top: 5.0),
-            height: 200.0,
-            width: MediaQuery.of(context).size.width - 100,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 30.0,
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.red,
-                    projectName: 'Exercicio 1',
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.blue,
-                    projectName: 'Exercicio 2',
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.amber,
-                    projectName: 'Exercicio 3',
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.green,
-                    projectName: 'Exercicio 4',
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.grey,
-                    projectName: 'Exercicio 5',
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.green,
-                    projectName: 'Exercicio 6',
-                  ),
-                  ProjectProgressCard(
-                    color: Colors.green,
-                    projectName: 'Exercicio 7',
-                  ),
-                  SizedBox(
-                    width: 30.0,
-                  )
-                ],
+              margin: EdgeInsets.only(top: 5.0),
+              height: 200.0,
+              width: MediaQuery.of(context).size.width - 100,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 1',
+                      'Crie um programa que imprima "Ola Mundo!" em Python',
+                      'print("Ola Mundo")',
+                      '1m',
+                      'Facílimo'
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 2',
+                      'Crie um programa que imprima o seu nome',
+                      'print("seu_nome")',
+                      '1m',
+                      'Facílimo'
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 3',
+                      'Dado um conjunto de números inteiros [3, 4, 6, 9, 15], imprima o número primo',
+                      'print("3")',
+                      '1m',
+                      'Facílimo'
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 4',
+                      'Imprima a sequência de números do exercício anterior',
+                      'print("3, 4, 6, 9, 15")',
+                      '1m',
+                      'Facílimo'
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 5',
+                      'Faça um programa que nos mostre seu nome e sua idade da seguinte forma:\n>>> Meu nome é (seu_nome) e eu tenho (sua_idade) anos.',
+                      'print("Meu nome é seu_nome e eu tenho sua_idade anos.")',
+                      '1m',
+                      'Facílimo'
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 6', 
+                      'Mostre o Zen do Python',
+                      'print("O Belo é melhor do que feio.")\nprint("Explícito é melhor do que implícito.")\nprint("Simples é melhor que complexo.")\nprint("Complexo é melhor do que complicado.")\nprint("A legibilidade conta.")\nprint("(...)")',
+                      '1m',
+                      'Facílimo'
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 7',
+                      '''Faça um código que faça a seguinte imagem:
+XXXXX
+X       X
+X       X
+X       X
+XXXXX
+''',
+                      'print("XXXXX")\nprint("X       X")\nprint("X       X")\nprint("X       X")\nprint("XXXXX")',
+                      '1m',
+                      'Fácil'
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          NormalText(''),
-          NormalText(''),
+            NormalText(''),
+            NormalText(''),
           ],
         ),
       ),
@@ -100,3 +136,17 @@ class Aula1 extends StatelessWidget {
   }
 }
 
+class PlanoAula1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula1',
+      aula: 'Aula 1',
+      tituloAula: 'Introdução ao Python',
+      conteudoRelacionado: 'Introdução à linguagem Python, aplicações.',
+      resumo: 'A linguagem de programação Python deu-se partida com o objetivo de desenvolver uma linguagem fácil, intuitiva e tão poderosa quanto as concorrentes. Estas características fizeram a linguagem se popularizar e se tornar amplamente utilizada, tanto por programadores quanto por engenheiros, matemáticos e pesquisadores em geral por - justamente - ser totalmente expressiva, sendo simples de traduzir o raciocínio em um algoritmo. Atualmente, uma das principais atuações do Python é no desenvolvimento da Inteligência Artificial (IA).',
+      objetivos: 'Esta primeira aula tem como objetivo apresentar o Python de forma simples e direta, indicando suas aplicações na vida diária assim como suas principais áreas de atuação e o motivo de ser uma linguagem tão utilizada atualmente.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet.',
+    );
+  }
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula2 extends StatelessWidget {
@@ -43,6 +44,21 @@ class Aula2 extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class PlanoAula2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula2',
+      aula: 'Aula 2',
+      tituloAula: 'Configuração e Instalação das Ferramentas',
+      conteudoRelacionado: 'Download do simulador python, download do Visual Studio',
+      resumo: 'Nesta aula, iremos - passo a passo - realizar o download do simulador em python que fará parte das nossas aulas e exercícios e o download da IDE Visual Studio em que iremos utilizar para escrever nossos códigos.',
+      objetivos: 'Nesta aula, iremos - passo a passo - realizar o download do simulador em python que fará parte das nossas aulas e exercícios e, o download da IDE Visual Studio em que iremos utilizar para escrever nossos códigos.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula8 extends StatelessWidget {
@@ -15,44 +16,57 @@ class Aula8 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClassTitleText("Aula 7 - Arrays"),
-            TitleText("Listas"),
-            NormalText('Uma lista nada mais é do que uma variável que armazena uma sequência de itens. Por exemplo:'),
+            ClassTitleText("Aula 8 - Strings"),
+            NormalText('Strings são listas de caracteres, do mesmo jeito que na lista utilizamos index para cada item, as strings utilizam o mesmo princípio, porém apenas com caracteres.'),
+            NormalText('Para declarar uma string deve-se utilizar aspas, por exemplo:'),
             ImageCode('aula_8_1.png'),
-            NormalText('É utilizado colchetes [] para inicializá-la, e também para acessar os valores dentro da mesma, utilizando o index, sempre começando em 0. por exemplo:'),
+            NormalText('Para acessar valores, utilizamos o mesmo princípio das listas, por index.'),
             ImageCode('aula_8_2.png'),
+            NormalText('Para selecionar um intervalo dentro da string, fazemos o seguinte:'),
             ImageCode('aula_8_3.png'),
-            NormalText('Para entender melhor as posições de um array, a imagem abaixo irá nos auxiliar:'),
+            NormalText('É possível utilizar um loop na string, por exemplo:'),
             ImageCode('aula_8_4.png'),
-            NormalText('Nas listas, não é preciso apenas armazenar valores do mesmo tipo, é possível conter todos os tipos dentro. Por exemplo:'),
+            TitleText('Funções de String'),
+            SubtitleText('Função len() - Tamanho da string'),
             ImageCode('aula_8_5.png'),
-            NormalText('As listas são mutáveis, logo, podemos adicionar, remover e alterar os seus valores.'),
-            SubtitleText('    Incluir valores no final da lista'),
+            SubtitleText('Função replace() - Substituir uma substring por alguma outra coisa'),
             ImageCode('aula_8_6.png'),
-            SubtitleText('    Incluir valor na posição desejada'),
+            SubtitleText('Concatenar Strings'),
             ImageCode('aula_8_7.png'),
-            SubtitleText('    Alterar valor'),
+            SubtitleText('Função upper() - Transformar tudo para maiúsculo'),
             ImageCode('aula_8_8.png'),
-            SubtitleText('    Deletar elemento'),
+            SubtitleText('Função lower() - Transformar tudo para minusculo'),
             ImageCode('aula_8_9.png'),
-            NormalText('Para selecionar um intervalo dentro da lista, fazemos o seguinte:'),
+            SubtitleText('Função find() - Verificar se existe algum valor dentro da string'),
             ImageCode('aula_8_10.png'),
-            TitleText("Tuplas"),
-            NormalText('Uma tupla é basicamente uma lista, possuindo a mesma estrutura, porém, uma tupla é imutável, ou seja, após declarada, não é possível alterar seus valores.'),
-            NormalText('Para declarar uma tupla, utilizamos os parênteses.'),
+            NormalText('Quando exister o que foi procurado dentro da string, ele irá retornar a posição na qual começa o valor desejado. Caso não exista, retorna -1.'),
+            SubtitleText('Função len() - Tamanho da string'),
             ImageCode('aula_8_11.png'),
-            TitleText("Dicionários"),
-            NormalText('Os dicionários também são parecidos com listas, porém servem para armazenar dados em par, sendo uma chave e um valor. Para declarar um dicionário é utilizado chaves. Por exemplo:'),
+            NormalText('A função split aceita como parâmetro o caracter que irá ser utilizado como chave para separar a string em várias partes. No exemplo acima, o caractere utilizado foi o padrão, sendo ele o espaço.'),
+            SubtitleText('Acentuação'),
+            NormalText('No python 2, para utilizarmos acentuação devemos especificar no nosso código que estamos utilizando o utf-8, caso contrário ele irá retornar erro nas string que possuem acentuação.'),
             ImageCode('aula_8_12.png'),
-            NormalText('Exemplo prático:'),
+            NormalText('Resolvemos o problema da seguinte maneira:'),
             ImageCode('aula_8_13.png'),
-            NormalText('No exemplo acima é possível ver que foi salvo diversas informações a respeito de um filme, tudo em apenas um lugar.'),
-            NormalText('Para buscar um valor no dicionário utilizamos o valor da chave, por exemplo:'),
-            ImageCode('aula_8_14.png'),
             NormalText(''),
           ],
         ),
       ),
+    );
+  }
+}
+
+class PlanoAula8 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula8',
+      aula: 'Aula 8',
+      tituloAula: 'Strings',
+      conteudoRelacionado: 'Apresentação das Strings',
+      resumo: 'Nesta aula será apresentado as Strings',
+      objetivos: 'Apresentar de forma simples e direta as Strings e demonstrar suas principais utilizações em um código. Por fim, tem-se exercícios práticos juntamente com o simulador  a fim de reforçar o conteúdo, demonstrando na prática suas utilizações.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }

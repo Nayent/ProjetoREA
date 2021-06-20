@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_project/services/images.dart';
+import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
 
 class Aula9 extends StatelessWidget {
@@ -15,42 +16,63 @@ class Aula9 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClassTitleText("Aula 8 - Strings"),
-            NormalText('Strings são listas de caracteres, do mesmo jeito que na lista utilizamos index para cada item, as strings utilizam o mesmo princípio, porém apenas com caracteres.'),
-            NormalText('Para declarar uma string deve-se utilizar aspas, por exemplo:'),
+            ClassTitleText("Aula 9 - Tratamento de erros e Exceções"),
+            NormalText('No nosso desenvolvimento até aqui, tivemos momentos em que escrevemos um código e, na hora de compilar, apareceu uma mensagem de erro. No mundo da programação terá esses momentos e, nesta aula, abordaremos justamente sobre eles: Erros.'),
+            NormalText('Existem pelo menos dois tipos distintos de erros: erros de sintaxe e exceções.'),
+            TitleText("Erros de sintaxe"),
+            NormalText('Erros de sintaxe, também conhecidos como erros de parse, são provavelmente os mais frequentes entre aqueles que ainda estão aprendendo Python. É quando escrevemos alguma função errada por exemplo “prit” ao invés de “print” ou, principalmente, quando há um erro na estrutura de alguma função, por exemplo:'),
             ImageCode('aula_9_1.png'),
-            NormalText('Para acessar valores, utilizamos o mesmo princípio das listas, por index.'),
+            NormalText('Neste exemplo terá um erro de sintaxe pois, após o while() precisa-se do dois pontos “:”. Ou seja, para corrigirmos o erro de sintaxe, basta colocar os dois pontos após o while(), assim:'),
             ImageCode('aula_9_2.png'),
-            NormalText('Para selecionar um intervalo dentro da string, fazemos o seguinte:'),
+            TitleText("Erros de exceções"),
+            NormalText('Os erros de exceções são quando ocorre um erro na hora da execução do código, mesmo que um comando ou expressão estejam sintaticamente corretos. Alguns erros de exceções mais comuns são NameError e TypeError.'),
+            NormalText('NameError é quando tem-se algum erro relacionado à alguma variável que não foi declarada, por exemplo:'),
             ImageCode('aula_9_3.png'),
-            NormalText('É possível utilizar um loop na string, por exemplo:'),
+            NormalText('TypeError é quando tem-se um erro de Tipo. Por exemplo:'),
             ImageCode('aula_9_4.png'),
-            TitleText('Funções de String'),
-            SubtitleText('Função len() - Tamanho da string'),
+            NormalText('Neste caso, o erro aparece pois não podemos somar uma string com um inteiro pois são de tipos diferentes.'),
+            NormalText('Um outro erro que pode ser facilmente encontrado, principalmente nos primeiros códigos é o erro ZeroDivisionError. Este erro indica quando tem-se uma divisão por 0, como pode-se ver no exemplo a seguir:'),
             ImageCode('aula_9_5.png'),
-            SubtitleText('Função replace() - Substituir uma substring por alguma outra coisa'),
+            NormalText('Outro exemplo que também é comum é o erro FileNotFoundError, ele indica que um arquivo não foi encontrado ou que não existe tal arquivo ou diretório.'),
+            TitleText("Tratamento de erros"),
+            NormalText('Quando nos deparamos com estes erros de exceções, podemos ver que eles irão interromper o código e não rodar mais, por exemplo:'),
             ImageCode('aula_9_6.png'),
-            SubtitleText('Concatenar Strings'),
+            NormalText('Temos que este código terá o erro ZeroDivisionError e irá parar aí, não executando os prints que vêm em sequência. Assim, ao executar estes comandos, a saída será:'),
             ImageCode('aula_9_7.png'),
-            SubtitleText('Função upper() - Transformar tudo para maiúsculo'),
+            NormalText('Para não acontecer isso (“quebrarmos” o código e ele não terminar de rodar), utilizamos o tratamento de erros de exceção. Para isso, utilizamos as funções “try” e “except” e a estrutura utilizada é:'),
             ImageCode('aula_9_8.png'),
-            SubtitleText('Função lower() - Transformar tudo para minusculo'),
+            NormalText('Esta estrutura nos diz que, quando entramos no “try” tentaremos executar o “caso” e, se for bem executado (sem ocorrer nenhum erro de exceção) ele irá sair desta estrutura e continuar rodando o código.'),
+            NormalText('Já quando o try nos dizer que ao executar o “caso” ocorreu uma exceção e ela for do tipo declarado em except (objeto_de_exceção), ela deverá ser tratada pelo caso de except (comando).  Caso ocorra uma exceção mas ela não for do tipo que except esta preparado para receber a exceção não será tratada.'),
+            NormalText('Quando queremos um caso mais geral ou, quando não sabemos ao certo o tipo de erro de exceção que surgirá, pode-se retirar da estrutura o objeto_de_exceção assim, ficando apenas:'),
             ImageCode('aula_9_9.png'),
-            SubtitleText('Função find() - Verificar se existe algum valor dentro da string'),
+            NormalText('Assim, para o caso anterior, podemos reescrever:'),
             ImageCode('aula_9_10.png'),
-            NormalText('Quando exister o que foi procurado dentro da string, ele irá retornar a posição na qual começa o valor desejado. Caso não exista, retorna -1.'),
-            SubtitleText('Função len() - Tamanho da string'),
+            NegriteText('*Atenção: não colocamos para realizar a leitura do “a” pois sabemos que o “a” não estará declarado (pois quando declaramos ele em a=10 * (1/0) esta linha apresentou erro e, portanto, não será levada para frente). Deste modo,  apresentará erro novamente.'),
+            NormalText('Para ultrapassarmos esta questão, pode-se utilizar o “else” - que aprendemos em aulas anteriores - após o “except”. Ele nos retornará - caso não entre no except - algum comando que queremos que irá utilizar o “caso” do “try”. E, se nosso “caso” entre no “except” o “else” não será executado. Com isso, agora podemos reescrever o exemplo inicial:'),
             ImageCode('aula_9_11.png'),
-            NormalText('A função split aceita como parâmetro o caracter que irá ser utilizado como chave para separar a string em várias partes. No exemplo acima, o caractere utilizado foi o padrão, sendo ele o espaço.'),
-            SubtitleText('Acentuação'),
-            NormalText('No python 2, para utilizarmos acentuação devemos especificar no nosso código que estamos utilizando o utf-8, caso contrário ele irá retornar erro nas string que possuem acentuação.'),
+            NegriteText('*Atenção: Adicionou-se no início um input para solicitarmos um número qualquer para que tenhamos entradas variadas para nosso teste.'),
+            NormalText('Neste exemplo, o usuário irá digitar um número qualquer e nosso código irá tentar (try) executar o caso (a = 10*(1/x)). Se apresentar erro de divisão por zero, nosso código irá retornar uma mensagem dizendo "Não é possível dividir por zero”. Caso o usuário digite outro número, sem ser o zero, irá tentar realizar nosso cálculo e, como não será um erro de exceção, realiza o cálculo e pula direto para nosso “else” e nos diz a resposta (guardada na variável “a”). Em ambos os casos, nosso código não é interrompido e, ao sair da estrutura de tratamento de erro, irá nos retornar a mensagem "Saindo...".'),
+            NormalText('Um ponto que pode surgir é quando não queremos dar nenhum comando quando o código entra no “except”. Para isso, utiliza-se o “pass” que irá mandar o código apenas “passar" ou “seguir” sem nenhuma interrupção. Utilizando o mesmo exemplo, tem-se:'),
             ImageCode('aula_9_12.png'),
-            NormalText('Resolvemos o problema da seguinte maneira:'),
-            ImageCode('aula_9_13.png'),
             NormalText(''),
           ],
         ),
       ),
+    );
+  }
+}
+
+class PlanoAula9 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula9',
+      aula: 'Aula 9',
+      tituloAula: 'Tratamento de erros e Exceções',
+      conteudoRelacionado: 'Tratamento de erros e Exceções',
+      resumo: 'Nesta aula será apresentado como resolver erros e Exceções',
+      objetivos: 'Capacitar o aluno para que quando surja algum problema durante a resolução de algum código, consiga resolve-lo',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
   }
 }
