@@ -69,6 +69,75 @@ class Aula7 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.amber,
                       'Exercicio 1',
+                      'Faça um Programa que crie um vetor de 5 números inteiros utilizando um laço de repetição e mostre-os.',
+'''
+# -*- coding: utf-8 -*-
+ 
+x=0
+var = list()
+for x in range(0,5,1):
+    var.append(x)
+ 
+print(var)
+''',
+                      '1m',
+                      'Médio',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 2',
+                      'Faça um Programa que crie um vetor de 10 números inteiros ímpares e mostre-os na ordem decrescente.',
+'''
+# -*- coding: utf-8 -*-
+x=0
+var = list()
+for x in range(19,0,-2):
+    var.append(x)
+print(var)
+''',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 3',
+                      'Faça um Programa que leia um vetor [1, 4, 3, 9, 8], mostre a soma, a multiplicação e os números pares.',
+'''
+# -*- coding: utf-8 -*-
+ 
+vetor=[1, 4, 3, 9, 8]
+x=0
+k=0
+m=1
+n=0
+#Realizando a soma
+for x in range(0,5):
+    k=k+vetor[x]
+ 
+#Realizando a multiplicacao
+for x in range(0,5):
+    m=m*vetor[x]
+ 
+vetor2=list()
+a=0
+for x in range(0,5):
+    if(vetor[x]%2==0):
+        vetor2.append(vetor[x])
+        a=a+1
+ 
+print(k)
+print(m)
+print(vetor2)
+''',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 4',
                       'Desenvolva um código que receba um número de 0 a 10 e nos retorne o número que se encontra nesta determinada casa após a vírgula do número pi. Esta posição será um número digitado pelo usuário.',
 '''
 # -*- coding: utf-8 -*-
@@ -82,61 +151,31 @@ print(pi)
 print("o numero prensente nesta posicao e o",saida)
 ''',
                       '1m',
-                      'Médio',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 2',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 3',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 4',
-                      '',
-                      '',
-                      '1m',
                       'Facílimo',
                       bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 5',
-                      '',
-                      '',
+                      'Crie um programa que gere uma lista de 10 números em sequência crescente. Exclua os três últimos números da lista e, em seguida, altere esta lista de forma que fique de ordem decrescente.',
+'''
+# -*- coding: utf-8 -*-
+ 
+x=0
+var = list()
+var2= list()
+for x in range(0,10,1):
+    var.append(x)
+for x in range(0,3,1):
+    var.pop()
+tamanho=(len(var))
+for x in range(tamanho-1,-1,-1):
+    var2.append(var[x])
+ 
+print(var2)
+''',
                       '1m',
                       'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 6', 
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.green,
-                      'Exercicio 7',
-                      '',
-                      '',
-                      '1m',
-                      'Fácil',
                       bol: false,
                     ),
                     SizedBox(

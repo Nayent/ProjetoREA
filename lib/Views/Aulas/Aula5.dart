@@ -64,8 +64,96 @@ class Aula5 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 1',
-                      '',
-                      '',
+                      'Realizar o exercício X da aula anterior, porém utilizando funções.',
+'''
+from AriaPy import *
+import sys
+ 
+# Inicialização da biblioteca global:
+Aria_init()
+ 
+parser = ArArgumentParser(sys.argv)
+parser.loadDefaultArguments()
+ 
+# Criando um objeto robô:
+robot = ArRobot()
+ 
+print ("Conectando...")
+ 
+con = ArRobotConnector(parser, robot)
+if not Aria_parseArgs():
+   Aria_logOptions()
+   Aria_exit(1)
+ 
+if not con.connectRobot():
+   print ("Não foi possível conectar ao robô, saindo...")
+   Aria_exit(1)
+ 
+# Executando as threads do robô em segundo plano:
+print ("Rodando...")
+robot.runAsync(True,True)
+ 
+ 
+#Dirija o robô um pouco e saia.
+ 
+robot.lock()
+print ("Posição do robô utilizando métodos de acesso do ArRobot: (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+ 
+ 
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose:", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+ 
+ 
+print ("Enviando comando para avançar 1 metro...")
+robot.enableMotors() #Ligando motores
+robot.move(1000) #Andando 1 metro
+robot.unlock()
+ 
+print ("Dormindo por 5 segundos...")
+ArUtil_sleep(5000) #Dormindo por 5 segundos
+ 
+ 
+movimento = "esquerda"
+ 
+def girar():
+if movimento == "esquerda":
+      #Virando à esquerda e formando a aresta direita do retângulo
+      robot.lock()
+      print ("Enviando comando para girar 90 graus...")
+      robot.setHeading(90) #Girando até o ângulo de 90 graus
+      robot.unlock()
+      print ("Dormindo por 5 segundos...")
+      ArUtil_sleep(5000)
+ 
+ 
+def andar(): 
+robot.lock()
+robot.move(1000)
+robot.unlock()
+print ("Dormindo por 5 segundos...")
+ArUtil_sleep(5000)
+ 
+andar()
+girar()
+andar()
+girar()
+andar()
+girar()
+andar()
+girar()
+andar()
+ 
+robot.lock()
+print ("Posição do robô (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose: ", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+robot.unlock()
+ 
+print ("Saindo.")
+Aria_shutdown()#Desligando os motores
+''',
                       '1m',
                       'Facílimo',
                       bol: false,
@@ -73,8 +161,86 @@ class Aula5 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 2',
-                      '',
-                      '',
+                      'Crie um programa que possua uma função que mostre a distância percorrida pelo robô.',
+'''
+from AriaPy import *
+import sys
+ 
+def posicao():	
+     if movimento == "esquerda":
+ 
+     robot.lock()
+     print ("Enviando comando para girar 90 graus...")
+     robot.setHeading(0) #Girando até o ângulo de 0 graus
+     robot.unlock()
+     print ("Dormindo por 5 segundos...")
+     ArUtil_sleep(5000)
+ 
+     robot.lock()
+     print ("Posição do robô (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+     pose = robot.getPose()
+     print ("Posição do robô por impressão do objeto ArPose: ", pose)
+     print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+     robot.unlock()
+ 
+# Inicialização da biblioteca global:
+Aria_init()
+ 
+parser = ArArgumentParser(sys.argv)
+parser.loadDefaultArguments()
+ 
+# Criando um objeto robô:
+robot = ArRobot()
+ 
+print ("Conectando...")
+ 
+con = ArRobotConnector(parser, robot)
+if not Aria_parseArgs():
+   Aria_logOptions()
+   Aria_exit(1)
+ 
+if not con.connectRobot():
+   print ("Não foi possível conectar ao robô, saindo...")
+   Aria_exit(1)
+ 
+ 
+# Executando as threads do robô em segundo plano:
+print ("Rodando...")
+robot.runAsync(True,True)
+ 
+ 
+#Dirija o robô um pouco e saia.
+ 
+robot.lock()
+print ("Posição do robô utilizando métodos de acesso do ArRobot: (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+ 
+ 
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose:", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+ 
+ 
+print ("Enviando comando para avançar 1 metro...")
+robot.enableMotors() #Ligando motores
+robot.move(1000) #Andando 1 metro
+robot.unlock()
+ 
+print ("Dormindo por 5 segundos...")
+ArUtil_sleep(5000) #Dormindo por 5 segundos
+ 
+movimento = "esquerda"
+posicao()
+ 
+robot.lock()
+print ("Posição do robô (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose: ", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+robot.unlock()
+ 
+print ("Saindo.")
+Aria_shutdown()#Desligando os motores
+''',
                       '1m',
                       'Facílimo',
                       bol: false,
@@ -82,7 +248,7 @@ class Aula5 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 3',
-                      '',
+                      'Crie um programa que possua uma função que mostre um percurso em círculo. Utilize um cálculo matemático para definir o ângulo em graus de orientação do robô (Por exemplo: 25 graus a cada 1 segundo) ',
                       '',
                       '1m',
                       'Facílimo',
@@ -91,8 +257,13 @@ class Aula5 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 4',
-                      '',
-                      '',
+                      'Montar função que calcula área de uma circunferência',
+'''
+def area_do_círculo(raio):
+	pi = 3.1415
+	area = pi*raio**2
+	return area
+''',
                       '1m',
                       'Facílimo',
                       bol: false,
@@ -100,8 +271,14 @@ class Aula5 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 5',
-                      '',
-                      '',
+                      'Montar função que calcula Bhaskara',
+'''
+def bhaskara(a,b,c):
+	delta = (b**2)-(4*a*c)
+	raiz_1 = ((-b)+(delta)**(1/2))/(2*a)
+	raiz_2 = ((-b)-(delta)**(1/2))/(2*a)
+	return raiz_1, raiz_2
+''',
                       '1m',
                       'Facílimo',
                       bol: false,
@@ -153,5 +330,75 @@ class PlanoAula5 extends StatelessWidget {
       objetivos: 'O objetivo é iniciar o estudante na modularização do código. Os exercícios práticos também apresentam exemplos de cálculos em funções com interação com o robô no simulador.',
       pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
     );
+  }
+}
+
+class gabarito3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        NormalText(
+'''
+from AriaPy import *
+import sys
+ 
+ 
+def circulo():
+ 
+    robot.enableMotors()
+    robot.move(50000) #Tempo global do movimento
+    robot.unlock()
+    angulo = 1
+    while True:
+            robot.setHeading(angulo)
+            ArUtil_sleep(1000) #Necessário utilizar com a função 'move'
+            angulo = angulo + 25
+ 
+ 
+# Inicialização da biblioteca global:
+Aria_init()
+ 
+parser = ArArgumentParser(sys.argv)
+parser.loadDefaultArguments()
+ 
+# Criando um objeto robô:
+robot = ArRobot()
+ 
+print ("Conectando...")
+ 
+con = ArRobotConnector(parser, robot)
+if not Aria_parseArgs():
+   Aria_logOptions()
+   Aria_exit(1)
+ 
+if not con.connectRobot():
+   print ("Não foi possível conectar ao robô, saindo...")
+   Aria_exit(1)
+ 
+ 
+# Executando as threads do robô em segundo plano:
+print ("Rodando...")
+robot.runAsync(True,True)
+ 
+ 
+#Dirija o robô um pouco e saia.
+robot.lock()
+print ("Posição do robô (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose: ", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+robot.unlock()
+ 
+circulo()
+ 
+ 
+print ("Saindo.")
+Aria_shutdown()#Desligando os motores
+'''
+        ),
+        ImageCode('gabs_5_1.png')
+      ]);
   }
 }

@@ -40,7 +40,7 @@ class Aula8 extends StatelessWidget {
             ImageCode('aula_8_9.png'),
             SubtitleText('Função find() - Verificar se existe algum valor dentro da string'),
             ImageCode('aula_8_10.png'),
-            NormalText('Quando exister o que foi procurado dentro da string, ele irá retornar a posição na qual começa o valor desejado. Caso não exista, retorna -1.'),
+            NormalText('Quando existe o que foi procurado dentro da string, ele irá retornar a posição na qual começa o valor desejado. Caso não exista, retorna -1.'),
             SubtitleText('Função len() - Tamanho da string'),
             ImageCode('aula_8_11.png'),
             NormalText('A função split aceita como parâmetro o caracter que irá ser utilizado como chave para separar a string em várias partes. No exemplo acima, o caractere utilizado foi o padrão, sendo ele o espaço.'),

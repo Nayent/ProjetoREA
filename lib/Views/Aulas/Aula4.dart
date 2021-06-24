@@ -152,8 +152,19 @@ class Aula4 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 1',
-                      '',
-                      '',
+                      'Faça um código que, receba 2 números e diga qual é o maior entre eles.',
+'''
+# -*- coding: utf-8 -*-
+ 
+numero_1=input("Digite o primeiro numero: ")
+numero_2=input("Digite o segundo numero: ")
+if(numero_1>numero_2):
+    print "O numero", numero_1, "e maior que o numero" , numero_2
+elif(numero_2>numero_1):
+    print "O numero", numero_2, "e maior que o numero" , numero_1
+else:
+    print "O numero", numero_1, "e  o numero",numero_2,"sao iguais"
+''',
                       '1m',
                       'Facílimo',
                       bol: false,
@@ -161,55 +172,135 @@ class Aula4 extends StatelessWidget {
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 2',
-                      '',
-                      '',
+                      'Modifique o código-fonte do exercício 1 da aula anterior para gerar um caminho do robô com estrutura condicional para formar um retângulo na tela.',
+'''
+from AriaPy import *
+import sys
+ 
+# Inicialização da biblioteca global:
+Aria_init()
+ 
+parser = ArArgumentParser(sys.argv)
+parser.loadDefaultArguments()
+ 
+# Criando um objeto robô:
+robot = ArRobot()
+ 
+print ("Conectando...")
+ 
+con = ArRobotConnector(parser, robot)
+if not Aria_parseArgs():
+   Aria_logOptions()
+   Aria_exit(1)
+ 
+if not con.connectRobot():
+   print ("Não foi possível conectar ao robô, saindo...")
+   Aria_exit(1)
+ 
+ 
+# Executando as threads do robô em segundo plano:
+print ("Rodando...")
+robot.runAsync(True,True)
+ 
+ 
+#Dirija o robô um pouco e saia.
+ 
+robot.lock()
+print ("Posição do robô utilizando métodos de acesso do ArRobot: (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+ 
+ 
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose:", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+ 
+ 
+print ("Enviando comando para avançar 1 metro...")
+robot.enableMotors() #Ligando motores
+robot.move(1000) #Andando 1 metro
+robot.unlock()
+ 
+print ("Dormindo por 5 segundos...")
+ArUtil_sleep(5000) #Dormindo por 5 segundos
+ 
+#--------------------------------------------------------
+ 
+movimento = "esquerda"
+ 
+if movimento == "esquerda":
+#gira
+   robot.lock()
+   print ("Enviando comando para girar 90 graus...")
+   robot.setHeading(90) #Girando até o ângulo de 90 graus
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+#anda
+   robot.lock()
+   robot.move(1000)
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+ 
+if movimento == "esquerda":
+#gira
+   robot.lock()
+   print ("Enviando comando para girar 90 graus...")
+   robot.setHeading(180) #Girando até o ângulo de 180 graus
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+#anda
+   robot.lock()
+   robot.move(1000)
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+ 
+if movimento == "esquerda":
+#gira
+   robot.lock()
+   print ("Enviando comando para girar 270 graus...")
+   robot.setHeading(270) #Girando até o ângulo de 270 graus
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+#anda
+   robot.lock()
+   robot.move(1000)
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+ 
+if movimento == "esquerda":
+#gira
+   robot.lock()
+   print ("Enviando comando para girar 90 graus...")
+   robot.setHeading(0) #Girando até o ângulo de 0 graus
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+#anda
+   robot.lock()
+   robot.move(1000)
+   robot.unlock()
+   print ("Dormindo por 5 segundos...")
+   ArUtil_sleep(5000)
+ 
+ 
+#--------------------------------------------------------
+ 
+robot.lock()
+print ("Posição do robô (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose: ", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+robot.unlock()
+ 
+print ("Saindo.")
+Aria_shutdown()#Desligando os motores
+''',
                       '1m',
                       'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 3',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 4',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 5',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 6', 
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.green,
-                      'Exercicio 7',
-                      '',
-                      '',
-                      '1m',
-                      'Fácil',
                       bol: false,
                     ),
                     SizedBox(
