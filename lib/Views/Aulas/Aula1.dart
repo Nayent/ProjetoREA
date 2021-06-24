@@ -64,7 +64,8 @@ class Aula1 extends StatelessWidget {
                       'Crie um programa que imprima "Ola Mundo!" em Python',
                       'print("Ola Mundo")',
                       '1m',
-                      'Facílimo'
+                      'Facílimo',
+                      bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
@@ -72,7 +73,8 @@ class Aula1 extends StatelessWidget {
                       'Crie um programa que imprima o seu nome',
                       'print("seu_nome")',
                       '1m',
-                      'Facílimo'
+                      'Facílimo',
+                      bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
@@ -80,7 +82,8 @@ class Aula1 extends StatelessWidget {
                       'Dado um conjunto de números inteiros [3, 4, 6, 9, 15], imprima o número primo',
                       'print("3")',
                       '1m',
-                      'Facílimo'
+                      'Facílimo',
+                      bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
@@ -88,7 +91,8 @@ class Aula1 extends StatelessWidget {
                       'Imprima a sequência de números do exercício anterior',
                       'print("3, 4, 6, 9, 15")',
                       '1m',
-                      'Facílimo'
+                      'Facílimo',
+                      bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
@@ -96,7 +100,8 @@ class Aula1 extends StatelessWidget {
                       'Faça um programa que nos mostre seu nome e sua idade da seguinte forma:\n>>> Meu nome é (seu_nome) e eu tenho (sua_idade) anos.',
                       'print("Meu nome é seu_nome e eu tenho sua_idade anos.")',
                       '1m',
-                      'Facílimo'
+                      'Facílimo',
+                      bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
@@ -104,7 +109,8 @@ class Aula1 extends StatelessWidget {
                       'Mostre o Zen do Python',
                       'print("O Belo é melhor do que feio.")\nprint("Explícito é melhor do que implícito.")\nprint("Simples é melhor que complexo.")\nprint("Complexo é melhor do que complicado.")\nprint("A legibilidade conta.")\nprint("(...)")',
                       '1m',
-                      'Facílimo'
+                      'Facílimo',
+                      bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.green,
@@ -118,7 +124,8 @@ XXXXX
 ''',
                       'print("XXXXX")\nprint("X       X")\nprint("X       X")\nprint("X       X")\nprint("XXXXX")',
                       '1m',
-                      'Fácil'
+                      'Fácil',
+                      bol: false,
                     ),
                     SizedBox(
                       width: 30.0,

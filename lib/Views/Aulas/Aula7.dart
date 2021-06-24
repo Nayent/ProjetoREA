@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
 import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
@@ -50,6 +51,102 @@ class Aula7 extends StatelessWidget {
             NormalText('No exemplo acima é possível ver que foi salvo diversas informações a respeito de um filme, tudo em apenas um lugar.'),
             NormalText('Para buscar um valor no dicionário utilizamos o valor da chave, por exemplo:'),
             ImageCode('aula_7_14.png'),
+            NormalText(''),
+            ClassTitleText('Exercícios'),
+            Container(
+              margin: EdgeInsets.only(top: 5.0),
+              height: 200.0,
+              width: MediaQuery.of(context).size.width - 100,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    ProjectProgressCard(
+                      Colors.amber,
+                      'Exercicio 1',
+                      'Desenvolva um código que receba um número de 0 a 10 e nos retorne o número que se encontra nesta determinada casa após a vírgula do número pi. Esta posição será um número digitado pelo usuário.',
+'''
+# -*- coding: utf-8 -*-
+import math
+pi=math.pi
+entrada = input("Digite a posicao desejada: ")
+numero = math.trunc(pi*(10**entrada))
+numero_str = str(numero)
+saida = numero_str[entrada]
+print(pi)
+print("o numero prensente nesta posicao e o",saida)
+''',
+                      '1m',
+                      'Médio',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 2',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 3',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 4',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 5',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 6', 
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 7',
+                      '',
+                      '',
+                      '1m',
+                      'Fácil',
+                      bol: false,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
             NormalText(''),
           ],
         ),

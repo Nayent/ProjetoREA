@@ -170,3 +170,21 @@ class CenterItalicText extends StatelessWidget {
     );
   }
 }
+
+class HomeText extends StatelessWidget {
+  final String text;
+
+  HomeText(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: SelectableText(
+        text,
+        style: GoogleFonts.quicksand(fontSize: 24.0),
+        textAlign: TextAlign.justify,
+      ),
+    );
+  }
+}

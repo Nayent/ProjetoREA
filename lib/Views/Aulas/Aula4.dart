@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
 import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
@@ -133,6 +134,92 @@ class Aula4 extends StatelessWidget {
               ]),
             ),
             NormalText('O valor que irá ser retornado realizando essas operações será um booleano (True ou False), sendo True quando a operação for verdadeira e False caso contrário.'),
+            NormalText(''),
+            ClassTitleText('Exercícios'),
+            Container(
+              margin: EdgeInsets.only(top: 5.0),
+              height: 200.0,
+              width: MediaQuery.of(context).size.width - 100,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 1',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 2',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 3',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 4',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 5',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 6', 
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 7',
+                      '',
+                      '',
+                      '1m',
+                      'Fácil',
+                      bol: false,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
             NormalText(''),
           ],
         ),

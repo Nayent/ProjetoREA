@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
 import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
@@ -41,6 +42,178 @@ class Aula6 extends StatelessWidget {
             NormalText('Lembrando que tanto na função range(), quanto na condição “contador < 6”, o valor do contador não chega em 6, sempre irá para um antes, caso queira utilizar o próximo valor deve-se usar:'),
             NormalText('  range(7)'),
             NormalText('  contador <= 6'),
+            NormalText(''),
+            ClassTitleText('Exercícios'),
+            Container(
+              margin: EdgeInsets.only(top: 5.0),
+              height: 200.0,
+              width: MediaQuery.of(context).size.width - 100,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 1',
+                      'Faça um código que mostre os valores inteiros de 0 até 100.',
+'''
+# -*- coding: utf-8 -*-
+ 
+#Utilizando For:
+for x in range(0,100,1):
+    print (x)
+ 
+#Utilizando While
+x=0
+while(x<100):
+    print(x)
+    x += 1
+''',
+                      '1m',
+                      'Facíl',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 2',
+                      'Faça um contador que vá de 0 até 100 dando saltos de 2 em 2.',
+'''
+# -*- coding: utf-8 -*-
+ 
+#Utilizando For:
+for x in range(0,100,2):
+    print (x)
+ 
+#Utilizando While
+x=0
+while(x<100):
+    print(x)
+    x += 2
+''',
+                      '1m',
+                      'Facíl',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 3',
+                      'Faça um contador decrescente que inicie em 100 e termine em 0 e mostre todos os inteiros ímpares.',
+'''
+# -*- coding: utf-8 -*-
+ 
+#Utilizando For:
+for x in range(100,0,-1):
+    print (x)
+ 
+#Utilizando While
+x=100
+while(x>0):
+    print(x)
+    x -= 1
+''',
+                      '1m',
+                      'Facíl',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.amber,
+                      'Exercicio 4',
+                      'Crie uma função que receba dois números e, então, mostre - de forma crescente - todos os números inteiros entre eles.',
+'''
+# -*- coding: utf-8 -*-
+ 
+a=input("Digite o primeiro numero: ")
+b=input("Digite o segundo numero: ")
+ 
+if(a>b+1):
+    maior=a
+    menor=b
+elif(b>a+1):
+    maior=b
+    menor=a
+else:
+    maior=a
+    menor=b
+    print("Nao tem um numero inteiro entre eles!")
+ 
+for x in range(menor+1,maior,1):
+    print (x)
+ 
+''',
+                      '1m',
+                      'Médio',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 5',
+                      'Desenvolva um programa que solicite uma nota de zero a dez. Mostre uma mensagem caso o valor seja inválido (fora deste intervalo) e peça novamente a senha até que seja preenchida corretamente.',
+'''
+# -*- coding: utf-8 -*-
+
+nota = input("Digite uma nota 0 ate 10: ")
+while (nota < 0) or (nota > 10):
+    nota = input("Nao pode ser menor que 0 ou maior que 10!\nTente novamente:")
+print("Nota valida")
+''',
+                      '1m',
+                      'Facíl',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 6', 
+                      'Construa um programa que leia um nome de usuário e a sua senha e, caso a senha e o nome forem iguais, mostre uma mensagem de erro informando que não pode-se inserir uma senha igual ao nome e volte a pedir as informações.',
+'''
+# -*- coding: utf-8 -*-
+
+login = raw_input("Login: ")
+senha = raw_input("Senha: ")
+while login == senha:
+    print("ERRO! Sua senha deve ser diferente do login: ")
+    senha = raw_input("Insira uma nova senha: ")
+print("Cadastro aprovado")
+'''
+,
+                      '1m',
+                      'Facíl',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.red,
+                      'Exercicio 7',
+                      'Faça um programa que receba um número inteiro entre 0 à 100 que será a posição de um número da sequência de fibonacci e, nos retorne que número está presente nesta posição.',
+'''
+# -*- coding: utf-8 -*-
+a = 1
+b = 1
+k = 0
+x = input("Digite a posicao do numero: ")
+while(k<x-2):
+    c = a+b
+    a = b
+    b = c
+    k += 1
+ 
+print(c)
+''',
+                      '1m',
+                      'Difícil',
+                      bol: false,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
             NormalText(''),
           ],
         ),

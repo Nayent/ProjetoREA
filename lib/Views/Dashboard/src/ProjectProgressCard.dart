@@ -10,15 +10,20 @@ class ProjectProgressCard extends StatefulWidget {
   final String gabarito;
   final String time;
   final String dif;
+  var gabs;
+  final bool bol;
 
   ProjectProgressCard(this.color, this.projectName, this.exercicio,
-      this.gabarito, this.time, this.dif);
+      this.gabarito, this.time, this.dif,
+      {this.gabs, this.bol});
   @override
   _ProjectProgressCardState createState() => _ProjectProgressCardState();
 }
 
 class _ProjectProgressCardState extends State<ProjectProgressCard> {
+
   bool hovered = false;
+  
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
@@ -37,7 +42,8 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
           showDialog(
               context: context,
               builder: (_) => AulaDialog(
-                  widget.exercicio, widget.projectName, widget.gabarito));
+                  widget.exercicio, widget.projectName, widget.gabarito,
+                  gabs: widget.gabs, bol: widget.bol));
         },
         child: Padding(
           padding: EdgeInsets.only(right: 20.0),
@@ -169,8 +175,10 @@ class AulaDialog extends StatelessWidget {
   final String exercicioNumber;
   final String exercicio;
   final String gabarito;
+  final gabs;
+  final bool bol;
 
-  AulaDialog(this.exercicio, this.exercicioNumber, this.gabarito);
+  AulaDialog(this.exercicio, this.exercicioNumber, this.gabarito, {this.gabs, this.bol});
 
   @override
   Widget build(BuildContext context) {
@@ -178,15 +186,21 @@ class AulaDialog extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width - 500,
         height: MediaQuery.of(context).size.height - 100,
-        child: Padding(
-          padding: const EdgeInsets.only(
-              top: 30.0, left: 30.0, right: 30.0, bottom: 0.0),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            TitleText(exercicioNumber),
-            SubtitleText(exercicio),
-            Gabarito(gabarito),
-          ]),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(
+                top: 30.0, left: 30.0, right: 30.0, bottom: 0.0),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              TitleText(exercicioNumber),
+              SubtitleText(exercicio),
+              Gabarito(
+                gabarito: gabarito,
+                gabs: gabs,
+                bol: bol,
+              )
+            ]),
+          ),
         ),
       ),
     );
@@ -195,8 +209,10 @@ class AulaDialog extends StatelessWidget {
 
 class Gabarito extends StatefulWidget {
   final String gabarito;
+  var gabs;
+  final bool bol;
 
-  Gabarito(this.gabarito);
+  Gabarito({this.gabarito, this.gabs, this.bol});
 
   @override
   _GabaritoState createState() => _GabaritoState();
@@ -241,6 +257,7 @@ class _GabaritoState extends State<Gabarito> {
                       widget.gabarito,
                       style: GoogleFonts.quicksand(fontSize: 16.0),
                     ),
+                    widget.bol ? widget.gabs : Text(''),
                   ]),
             ),
           ),

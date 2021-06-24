@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
 import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
@@ -45,6 +46,92 @@ class Aula5 extends StatelessWidget {
             NormalText('        2. Como foi separado em diversas partes, que realizam diversas funções, podemos reutilizar essas funções, diminuindo assim a quantidade de linhas do programa'),
             TitleText('Expressões Matemáticas'),
             NormalText('Um ponto importante relacionado às expressões é que elas seguem uma ordem de execução assim como na matemática, de modo que a operação prioritária será realizada primeiro, dando sequência para a execução das operações menos prioritárias.'),
+            NormalText(''),
+            ClassTitleText('Exercícios'),
+            Container(
+              margin: EdgeInsets.only(top: 5.0),
+              height: 200.0,
+              width: MediaQuery.of(context).size.width - 100,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 1',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 2',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 3',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 4',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 5',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 6', 
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 7',
+                      '',
+                      '',
+                      '1m',
+                      'Fácil',
+                      bol: false,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
             NormalText(''),
           ],
         ),

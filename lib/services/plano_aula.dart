@@ -33,7 +33,7 @@ class PlanoAula extends StatelessWidget {
             dataRowHeight: 110,
             columnSpacing: 60,
             columns: [
-            DataColumn(label: GoToClass(path)),
+            DataColumn(label: GoToClass2(path)),
             DataColumn(
                 label: Text(
               'Plano de Aula',

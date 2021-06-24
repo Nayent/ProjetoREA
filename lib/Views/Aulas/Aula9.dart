@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_project/Views/Dashboard/src/ProjectProgressCard.dart';
 import 'package:python_project/services/images.dart';
 import 'package:python_project/services/plano_aula.dart';
 import 'package:python_project/services/txts.dart';
@@ -54,6 +55,92 @@ class Aula9 extends StatelessWidget {
             NormalText('Neste exemplo, o usuário irá digitar um número qualquer e nosso código irá tentar (try) executar o caso (a = 10*(1/x)). Se apresentar erro de divisão por zero, nosso código irá retornar uma mensagem dizendo "Não é possível dividir por zero”. Caso o usuário digite outro número, sem ser o zero, irá tentar realizar nosso cálculo e, como não será um erro de exceção, realiza o cálculo e pula direto para nosso “else” e nos diz a resposta (guardada na variável “a”). Em ambos os casos, nosso código não é interrompido e, ao sair da estrutura de tratamento de erro, irá nos retornar a mensagem "Saindo...".'),
             NormalText('Um ponto que pode surgir é quando não queremos dar nenhum comando quando o código entra no “except”. Para isso, utiliza-se o “pass” que irá mandar o código apenas “passar" ou “seguir” sem nenhuma interrupção. Utilizando o mesmo exemplo, tem-se:'),
             ImageCode('aula_9_12.png'),
+            NormalText(''),
+            ClassTitleText('Exercícios'),
+            Container(
+              margin: EdgeInsets.only(top: 5.0),
+              height: 200.0,
+              width: MediaQuery.of(context).size.width - 100,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 1',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 2',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 3',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 4',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 5',
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.blueAccent,
+                      'Exercicio 6', 
+                      '',
+                      '',
+                      '1m',
+                      'Facílimo',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 7',
+                      '',
+                      '',
+                      '1m',
+                      'Fácil',
+                      bol: false,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
             NormalText(''),
           ],
         ),

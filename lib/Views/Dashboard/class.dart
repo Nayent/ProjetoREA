@@ -42,23 +42,23 @@ class DashboardPage extends StatelessWidget {
                       AulasDash(
                           title: "Aula 1 - Introdução ao Python",
                           color: Colors.blue,
-                          et: 'Tempo Previsto: 1h40m',
+                          et: 'Tempo Previsto: 40m',
                           path: PlanoAula1()),
                       AulasDash(
                           title:
                               "Aula 2 - Configuração e Instalação das Ferramentas",
                           color: Colors.amber,
-                          et: 'Tempo Previsto: 1h30m',
+                          et: 'Tempo Previsto: 1h20m',
                           path: PlanoAula2()),
                       AulasDash(
                           title: "Aula 3 - Hello World do Robô no Simulador",
                           color: Colors.blue,
-                          et: 'Tempo Previsto: 1h30m',
+                          et: 'Tempo Previsto: 40m',
                           path: PlanoAula3()),
                       AulasDash(
                           title: "Aula 4 - Variáveis e Estruturas Condicionais",
                           color: Colors.green,
-                          et: 'Tempo Previsto: 1h30m',
+                          et: 'Tempo Previsto: 1h20m',
                           path: PlanoAula4()),
                       AulasDash(
                           title: "Aula 5 - Funções e Expressões Matemáticas",
@@ -78,17 +78,17 @@ class DashboardPage extends StatelessWidget {
                       AulasDash(
                           title: "Aula 8 - Strings",
                           color: Colors.amber,
-                          et: 'Tempo Previsto: 1h30m',
+                          et: 'Tempo Previsto: 1h40m',
                           path: PlanoAula8()),
                       AulasDash(
                           title: "Aula 9 - Tratamento de erros e Exceções",
                           color: Colors.red,
-                          et: 'Tempo Previsto: 1h30m',
+                          et: 'Tempo Previsto: 1h50m',
                           path: PlanoAula9()),
                       AulasDash(
                           title: "Aula 10 - Arquivos",
                           color: Colors.red,
-                          et: 'Tempo Previsto: 1h30m',
+                          et: 'Tempo Previsto: 1h50m',
                           path: PlanoAula10()),
                     ]),
                   ),
