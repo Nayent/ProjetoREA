@@ -65,65 +65,114 @@ class Aula8 extends StatelessWidget {
                       width: 30.0,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.red,
                       'Exercicio 1',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Faça um Programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima as consoantes sem repetir.',
+'''
+#coding: utf-8
+ 
+x = list("paralelogramo")
+a = set()#E uma lista com valores unicos (sem repeticoes)
+vogais = list("aeiou")
+i=0
+for k in x:
+    if k not in vogais: 
+        a.add(k)
+        i=i+1
+ 
+print(i)
+print(a)
+''',
+                      '15m',
+                      'Difícil',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 2',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Crie um programa que receba uma palavra em nos retorne uma string com as letras das posições pares da palavra, considerando o 0 como ponto de partida.',
+'''
+#coding: utf-8
+ 
+palavra = raw_input("Digite uma palavra: ")
+saida=list()
+for x in range(0,len(palavra),2):
+    saida.append(palavra[x])
+print(saida)
+''',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 3',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 4',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 5',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 6', 
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Crie um programa que receba uma frase qualquer do usuário e, inverta a ordem das palavras desta e, mostre o resultado da nova frase.',
+'''
+#coding: utf-8
+ 
+frase = raw_input("Digite uma frase: ")
+lista_frase = frase.split(' ')
+lista_frase_inv = list()
+ 
+for x in range(len(lista_frase)-1,-1,-1):
+    lista_frase_inv.append(lista_frase[x])
+ 
+print(lista_frase_inv)
+''',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.green,
-                      'Exercicio 7',
-                      '',
-                      '',
-                      '1m',
+                      'Exercicio 4',
+                      'Escreva um programa que transforme os nomes uma lista em nomes maiúsculos',
+'''
+#coding: utf-8
+nomes=["Guilherme","luis","Gerso","Marcos","Carol"]
+nomes = [elemento.upper() for elemento in nomes] # For inline
+print(nomes)
+''',
+                      '5m',
+                      'Fácil',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 5',
+                      'Crie um programa que mostre quantos espaços tem em uma frase.',
+'''
+#coding: utf-8
+n_espacos=0
+frase=raw_input("Digite uma frase: ")
+ 
+for x in range(0,len(frase)):
+    if(frase[x]==" "):
+        n_espacos += 1
+ 
+print(n_espacos)
+''',
+                      '5m',
+                      'Fácil',
+                      bol: false,
+                    ),
+                    ProjectProgressCard(
+                      Colors.green,
+                      'Exercicio 6', 
+                      'Crie um programa que dado um texto qualquer, tenha um mecanismo de pesquisa que irá procurar uma palavra digitada pelo usuário neste texto. Caso tenha a palavra, retorne uma frase dizendo: A palavra (palavra pesquisada pelo usuário) se encontra no texto. Caso a palavra não esteja no texto, retorne: A palavra (palavra pesquisada pelo usuário) não se encontra no texto.',
+'''
+#coding: utf-8
+while(1):
+    texto = "python aplicado na robotica"
+    pesquisa=raw_input("Digite uma palavra para pesquisar no texto: ")
+    verifica=texto.find(pesquisa)
+    if(verifica==-1):
+        print("A palavra "+pesquisa+" nao se encontra no texto")
+    else:    
+        print("A palavra "+pesquisa+" se encontra no texto")
+''',
+                      '5m',
                       'Fácil',
                       bol: false,
                     ),

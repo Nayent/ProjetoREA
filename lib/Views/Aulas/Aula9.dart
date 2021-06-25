@@ -71,66 +71,41 @@ class Aula9 extends StatelessWidget {
                       width: 30.0,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 1',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Nos foi passado a seguinte lista: [1,2,3,4,5,6,"",7,8,9]. Foi pedido para que transformemos cada valor da lista em um tipo float e imprimir na tela. Faça um programa que faça o que foi pedido sem que ocorra nenhum erro durante a execução do programa.',
+'''
+lista = [1,2,3,4,5,6,"",7,8,9]
+
+for i in a:
+    try:
+        print(float(i))
+    except:
+        pass
+''',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 2',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 3',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 4',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 5',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 6', 
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.green,
-                      'Exercicio 7',
-                      '',
-                      '',
-                      '1m',
-                      'Fácil',
+                      'Monte um código que receba um número e então, tire a raiz quadrada deste número. Entretanto, este código não deverá ser interrompido por algum erro.',
+'''
+#coding: utf-8
+import math
+numero = input("Digite um numero: ")
+try:
+    resultado = math.sqrt(numero)
+except ValueError:
+    print("Atencao! Nao e possivel calcular a raiz quadrada de um numero negativo!")
+except:
+    print("Nao foi possivel reconhecer este numero!")
+else:
+    print(resultado)
+''',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     SizedBox(

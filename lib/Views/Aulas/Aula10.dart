@@ -58,66 +58,62 @@ class Aula10 extends StatelessWidget {
                       width: 30.0,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.green,
                       'Exercicio 1',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Escreva seu nome em um arquivo',
+'''
+arquivo = open('meu_nome', 'w')
+ 
+arquivo.write('Meu Nome\n')
+ 
+arquivo.close()
+''',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 2',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Escreva uma lista de 0 a 100, em um arquivo',
+'''
+arquivo = open('lista', 'w')
+ 
+lista_de_dados = ['{}\n'.format(x) for x in range(1,101)]
+ 
+arquivo.writelines(lista_de_dados)
+ 
+arquivo.close()
+''',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 3',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
+                      'Leia e mostre na tela os dados dentro dos arquivos gerados nos exercícios 1 e 2',
+'''
+arquivo = open('meu_nome', 'r')
+arquivo2 = open('lista', 'r')
+ 
+dados_1 = arquivo.readlines()
+dados_2 = arquivo2.readlines()
+ 
+print('Dados do primeiro arquivo:\n{}'.format(dados_1))
+print('\nDados do segundo arquivo:\n{}'.format(dados_2))
+''',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 4',
+                      'Salve as posições do robô em um arquivo',
                       '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 5',
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 6', 
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.green,
-                      'Exercicio 7',
-                      '',
-                      '',
-                      '1m',
-                      'Fácil',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     SizedBox(
