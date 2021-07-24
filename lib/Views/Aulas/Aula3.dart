@@ -131,7 +131,50 @@ Aria_shutdown()#Desligando os motores
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 2',
-                      'Modifique o programa de exemplo para que o robô faça um percurso de um retângulo no mapa.',
+                      'Modifique o programa de exemplo para que o robô faça um percurso no mapa.',
+                      '',
+                      '10m',
+                      'Médio',
+                      gabs: gabarito2(),
+                      bol: true,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
+            NormalText(''),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PlanoAula3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula3',
+      aula: 'Aula 3',
+      tituloAula: 'Hello World do Robô no Simulador',
+      conteudoRelacionado: 'Programação em Python com o Simulador',
+      resumo: 'Apresentação das estruturas de repetição.',
+      objetivos: 'Nesta aula, iniciaremos com a função “print” da programação que irá imprimir algo que desejamos no nosso programa e, em seguida, o funcionamento do simulador em que utilizaremos como base neste curso para então, resolvermos alguns exercícios no próprio simulador com base na linguagem Python,',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
+    );
+  }
+}
+
+
+class gabarito2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      NormalText(
 '''
 from AriaPy import *
 import sys
@@ -260,37 +303,8 @@ robot.unlock()
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '10m',
-                      'Médio',
-                      bol: false,
-                    ),
-                    SizedBox(
-                      width: 30.0,
-                    )
-                  ],
-                ),
-              ),
-            ),
-            NormalText(''),
-            NormalText(''),
-          ],
-        ),
       ),
-    );
-  }
-}
-
-class PlanoAula3 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return PlanoAula(
-      path: 'aula3',
-      aula: 'Aula 3',
-      tituloAula: 'Hello World do Robô no Simulador',
-      conteudoRelacionado: 'Programação em Python com o Simulador',
-      resumo: 'Apresentação das estruturas de repetição.',
-      objetivos: 'Nesta aula, iniciaremos com a função “print” da programação que irá imprimir algo que desejamos no nosso programa e, em seguida, o funcionamento do simulador em que utilizaremos como base neste curso para então, resolvermos alguns exercícios no próprio simulador com base na linguagem Python,',
-      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
-    );
+      ImageGabs('gabs_3_1.png', 550)
+    ]);
   }
 }

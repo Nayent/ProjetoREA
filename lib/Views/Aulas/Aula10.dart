@@ -108,12 +108,151 @@ print('\\nDados do segundo arquivo:\\n{}'.format(dados_2))
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.amber,
+                      Colors.red,
                       'Exercicio 4',
                       'Salve as posições do robô em um arquivo',
-                      '',
-                      '10m',
-                      'Médio',
+'''
+# coding: utf-8
+
+#Exericicio 1
+from AriaPy import *
+import sys
+import time
+import math
+ 
+ 
+Aria_init()
+ 
+parser = ArArgumentParser(sys.argv)
+parser.loadDefaultArguments()
+ 
+robot = ArRobot()
+ 
+ 
+print ("Conectando...")
+ 
+con = ArRobotConnector(parser, robot)
+if not Aria_parseArgs():
+   Aria_logOptions()
+   Aria_exit(1)
+ 
+if not con.connectRobot():
+   print ("Não foi possível conectar ao robô, saindo...")
+   Aria_exit(1)
+ 
+ 
+ 
+# Executando as threads do robô em segundo plano:
+print ("Rodando...")
+robot.runAsync(True,True)
+ 
+ 
+#Dirija o robô um pouco e saia.
+ 
+robot.lock()
+print ("Posição do robô utilizando métodos de acesso do ArRobot: (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+ 
+ 
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose:", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+ 
+ 
+print ("Enviando comando para avançar 1 metro...")
+robot.enableMotors() #Ligando motores
+robot.move(1000) #Andando 1 metro
+robot.unlock()
+ 
+print ("Dormindo por 5 segundos...")
+ArUtil_sleep(5000) #Dormindo por 5 segundos
+ 
+ 
+ 
+ # Girar para a esquerda
+def girar(x):
+    robot.lock()
+    print ("Enviando comando para girar 90 graus...")
+    robot.setHeading(x)
+    robot.unlock()
+    print ("Dormindo por 5 segundos...")
+    ArUtil_sleep(5000)
+ 
+def andar(): 
+    robot.lock()
+    print ("Enviando comando para avançar 1 metro...")
+    robot.move(1000)
+    robot.unlock()
+    print ("Dormindo por 5 segundos...")
+    ArUtil_sleep(5000)
+ 
+posicao_X = list()
+posicao_Y = list()
+posicao_Th = list()
+ 
+tempo = list()
+distancia = list()
+velocidade = list()
+ 
+posicao_X.append(robot.getX())
+posicao_Y.append(robot.getY())
+ 
+for i in range(1,5,1):
+    tempo_inicial = time.time()
+    andar()
+    tempo_final = time.time()
+    tempo.append(tempo_final-tempo_inicial)
+    
+    posicao_X.append(robot.getX())
+    posicao_Y.append(robot.getY())
+    
+    distancia_X = posicao_X[i]-posicao_X[i-1]
+    distancia_Y = posicao_Y[i]-posicao_Y[i-1]
+    distancia_geral = math.sqrt(distancia_X**2 + distancia_Y**2)
+    distancia.append(distancia_geral)
+    
+    vel = distancia[i-1]/tempo[i-1]
+    velocidade.append(vel)
+
+    girar(i*90)
+    posicao_Th.append(robot.getTh())
+
+arquivo = open('posicoes.txt', 'w')
+
+arquivo.write('Posições X: \\n')
+arquivo.writelines('; '.join(map(str, posicao_X)))
+
+arquivo.write('\\nPosições Y: \\n')
+arquivo.writelines('; '.join(map(str, posicao_Y)))
+
+arquivo.write('\\nTempo: \\n')
+arquivo.writelines('; '.join(map(str, tempo)))
+
+arquivo.write('\\nDistancia: \\n')
+arquivo.writelines('; '.join(map(str, distancia)))
+
+arquivo.write('\\nVelocidade: \\n')
+arquivo.writelines('; '.join(map(str, velocidade)))
+
+arquivo.close()
+
+# A função map aplica a função str a todos os itens da lista.
+
+
+# Saída de escrita no arquivo:
+
+Posições X: 
+1012.0; 2024.0; 2025.0; -380.0; -473.0
+Posições Y: 
+0.0; 0.0; 2868.0; 3542.0; 1797.0
+Tempo: 
+4.99088597298; 4.99036502838; 4.99042582512; 4.99040102959
+Distancia: 
+1012.0; 2868.00017434; 2497.65910404; 1747.47646622
+Velocidade: 
+202.76960954; 574.707492944; 500.490176904; 350.167542821
+''',
+                      '15m',
+                      'Difícil',
                       bol: false,
                     ),
                     SizedBox(

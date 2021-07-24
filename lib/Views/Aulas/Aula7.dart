@@ -178,6 +178,121 @@ print(var2)
                       'Fácil',
                       bol: false,
                     ),
+                    ProjectProgressCard(
+                      Colors.amber,
+                      'Exercicio 6',
+                      'Crie um programa que faça o robô percorrer um percurso, e no final mostre, em um array, as posições em X e Y, tempo, distancia e velocidade no percurso.',
+'''
+# coding: utf-8
+
+#Exericicio 1
+from AriaPy import *
+import sys
+import time
+import math
+ 
+ 
+Aria_init()
+ 
+parser = ArArgumentParser(sys.argv)
+parser.loadDefaultArguments()
+ 
+robot = ArRobot()
+ 
+ 
+print ("Conectando...")
+ 
+con = ArRobotConnector(parser, robot)
+if not Aria_parseArgs():
+   Aria_logOptions()
+   Aria_exit(1)
+ 
+if not con.connectRobot():
+   print ("Não foi possível conectar ao robô, saindo...")
+   Aria_exit(1)
+ 
+ 
+ 
+# Executando as threads do robô em segundo plano:
+print ("Rodando...")
+robot.runAsync(True,True)
+ 
+ 
+#Dirija o robô um pouco e saia.
+ 
+robot.lock()
+print ("Posição do robô utilizando métodos de acesso do ArRobot: (", robot.getX(), ",", robot.getY(), ",", robot.getTh(), ")")
+ 
+ 
+pose = robot.getPose()
+print ("Posição do robô por impressão do objeto ArPose:", pose)
+print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th, ")")
+ 
+ 
+print ("Enviando comando para avançar 1 metro...")
+robot.enableMotors() #Ligando motores
+robot.move(1000) #Andando 1 metro
+robot.unlock()
+ 
+print ("Dormindo por 5 segundos...")
+ArUtil_sleep(5000) #Dormindo por 5 segundos
+ 
+ 
+ 
+ # Girar para a esquerda
+def girar(x):
+    robot.lock()
+    print ("Enviando comando para girar 90 graus...")
+    robot.setHeading(x)
+    robot.unlock()
+    print ("Dormindo por 5 segundos...")
+    ArUtil_sleep(5000)
+ 
+def andar(): 
+    robot.lock()
+    print ("Enviando comando para avançar 1 metro...")
+    robot.move(1000)
+    robot.unlock()
+    print ("Dormindo por 5 segundos...")
+    ArUtil_sleep(5000)
+ 
+posicao_X = list()
+posicao_Y = list()
+posicao_Th = list()
+ 
+tempo = list()
+distancia = list()
+velocidade = list()
+ 
+posicao_X.append(robot.getX())
+posicao_Y.append(robot.getY())
+ 
+for i in range(1,5,1):
+    tempo_inicial = time.time()
+    andar()
+    tempo_final = time.time()
+    tempo.append(tempo_final-tempo_inicial)
+    
+    posicao_X.append(robot.getX())
+    posicao_Y.append(robot.getY())
+    
+    distancia_X = posicao_X[i]-posicao_X[i-1]
+    distancia_Y = posicao_Y[i]-posicao_Y[i-1]
+    distancia_geral = math.sqrt(distancia_X**2 + distancia_Y**2)
+    distancia.append(distancia_geral)
+    
+    vel = distancia[i-1]/tempo[i-1]
+    velocidade.append(vel)
+
+    girar(i*90)
+    posicao_Th.append(robot.getTh())
+
+print(posicao_X, posicao_Y, tempo, distancia, velocidade)
+''',
+                      '10m',
+                      'Médio',
+                      bol: false,
+                    ),
                     SizedBox(
                       width: 30.0,
                     )

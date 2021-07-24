@@ -172,7 +172,50 @@ else:
                     ProjectProgressCard(
                       Colors.blueAccent,
                       'Exercicio 2',
-                      'Modifique o código-fonte do exercício 1 da aula anterior para gerar um caminho do robô com estrutura condicional para formar um retângulo na tela.',
+                      'Modifique o código-fonte do exercício 1 da aula anterior para gerar um caminho do robô com estrutura condicional para realizar um percurso na tela, igual ao exericio da aula anterior.',
+                      '',
+                      '10m',
+                      'Médio',
+                      gabs: gabarito2(),
+                      bol: true,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            NormalText(''),
+            NormalText(''),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PlanoAula4 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PlanoAula(
+      path: 'aula4',
+      aula: 'Aula 4',
+      tituloAula: 'Variáveis e Estruturas Condicionais',
+      conteudoRelacionado: '',
+      resumo: 'Nesta aula veremos sobre Variáveis e Estruturas Condicionais',
+      objetivos: 'O objetivo desta aula é apresentar os conceitos de variáveis e estruturas condicionais SE-ENTÃO em Python. Serão apresentados exemplos práticos de uso desses conceitos com experimentação robótica no simulador.',
+      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
+    );
+  }
+}
+
+
+class gabarito2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      NormalText(
 '''
 from AriaPy import *
 import sys
@@ -299,37 +342,8 @@ robot.unlock()
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '10m',
-                      'Médio',
-                      bol: false,
-                    ),
-                    SizedBox(
-                      width: 30.0,
-                    )
-                  ],
-                ),
-              ),
-            ),
-            NormalText(''),
-            NormalText(''),
-          ],
-        ),
       ),
-    );
-  }
-}
-
-class PlanoAula4 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return PlanoAula(
-      path: 'aula4',
-      aula: 'Aula 4',
-      tituloAula: 'Variáveis e Estruturas Condicionais',
-      conteudoRelacionado: '',
-      resumo: 'Nesta aula veremos sobre Variáveis e Estruturas Condicionais',
-      objetivos: 'O objetivo desta aula é apresentar os conceitos de variáveis e estruturas condicionais SE-ENTÃO em Python. Serão apresentados exemplos práticos de uso desses conceitos com experimentação robótica no simulador.',
-      pre: 'Computador com Sistema Operacional Linux Ubuntu versão 16.04.LTS, acesso à internet, ter realizado as aulas anteriores.',
-    );
+      ImageGabs('gabs_3_1.png', 550)
+    ]);
   }
 }
