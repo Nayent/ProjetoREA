@@ -123,7 +123,7 @@ X       X
 XXXXX
 ''',
                       'print("XXXXX")\nprint("X       X")\nprint("X       X")\nprint("X       X")\nprint("XXXXX")',
-                      '1m',
+                      '5m',
                       'Fácil',
                       bol: false,
                     ),

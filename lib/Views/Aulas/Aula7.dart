@@ -80,12 +80,12 @@ for x in range(0,5,1):
  
 print(var)
 ''',
-                      '1m',
+                      '10m',
                       'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.green,
                       'Exercicio 2',
                       'Faça um Programa que crie um vetor de 10 números inteiros ímpares e mostre-os na ordem decrescente.',
 '''
@@ -96,12 +96,12 @@ for x in range(19,0,-2):
     var.append(x)
 print(var)
 ''',
-                      '1m',
-                      'Facílimo',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.green,
                       'Exercicio 3',
                       'Faça um Programa que leia um vetor [1, 4, 3, 9, 8], mostre a soma, a multiplicação e os números pares.',
 '''
@@ -131,12 +131,12 @@ print(k)
 print(m)
 print(vetor2)
 ''',
-                      '1m',
-                      'Facílimo',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.green,
                       'Exercicio 4',
                       'Desenvolva um código que receba um número de 0 a 10 e nos retorne o número que se encontra nesta determinada casa após a vírgula do número pi. Esta posição será um número digitado pelo usuário.',
 '''
@@ -150,12 +150,12 @@ saida = numero_str[entrada]
 print(pi)
 print("o numero prensente nesta posicao e o",saida)
 ''',
-                      '1m',
-                      'Facílimo',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.green,
                       'Exercicio 5',
                       'Crie um programa que gere uma lista de 10 números em sequência crescente. Exclua os três últimos números da lista e, em seguida, altere esta lista de forma que fique de ordem decrescente.',
 '''
@@ -174,8 +174,8 @@ for x in range(tamanho-1,-1,-1):
  
 print(var2)
 ''',
-                      '1m',
-                      'Facílimo',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     SizedBox(

@@ -74,7 +74,7 @@ while(x<100):
     print(x)
     x += 1
 ''',
-                      '1m',
+                      '5m',
                       'Facíl',
                       bol: false,
                     ),
@@ -95,7 +95,7 @@ while(x<100):
     print(x)
     x += 2
 ''',
-                      '1m',
+                      '5m',
                       'Facíl',
                       bol: false,
                     ),
@@ -116,7 +116,7 @@ while(x>0):
     print(x)
     x -= 1
 ''',
-                      '1m',
+                      '5m',
                       'Facíl',
                       bol: false,
                     ),
@@ -145,7 +145,7 @@ for x in range(menor+1,maior,1):
     print (x)
  
 ''',
-                      '1m',
+                      '10m',
                       'Médio',
                       bol: false,
                     ),
@@ -161,7 +161,7 @@ while (nota < 0) or (nota > 10):
     nota = input("Nao pode ser menor que 0 ou maior que 10!\nTente novamente:")
 print("Nota valida")
 ''',
-                      '1m',
+                      '5m',
                       'Facíl',
                       bol: false,
                     ),
@@ -180,7 +180,7 @@ while login == senha:
 print("Cadastro aprovado")
 '''
 ,
-                      '1m',
+                      '5m',
                       'Facíl',
                       bol: false,
                     ),
@@ -202,7 +202,7 @@ while(k<x-2):
  
 print(c)
 ''',
-                      '1m',
+                      '15m',
                       'Difícil',
                       bol: false,
                     ),

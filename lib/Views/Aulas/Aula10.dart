@@ -64,7 +64,7 @@ class Aula10 extends StatelessWidget {
 '''
 arquivo = open('meu_nome', 'w')
  
-arquivo.write('Meu Nome\n')
+arquivo.write('Meu Nome\\n')
  
 arquivo.close()
 ''',
@@ -79,7 +79,7 @@ arquivo.close()
 '''
 arquivo = open('lista', 'w')
  
-lista_de_dados = ['{}\n'.format(x) for x in range(1,101)]
+lista_de_dados = ['{}\\n'.format(x) for x in range(1,101)]
  
 arquivo.writelines(lista_de_dados)
  
@@ -100,15 +100,15 @@ arquivo2 = open('lista', 'r')
 dados_1 = arquivo.readlines()
 dados_2 = arquivo2.readlines()
  
-print('Dados do primeiro arquivo:\n{}'.format(dados_1))
-print('\nDados do segundo arquivo:\n{}'.format(dados_2))
+print('Dados do primeiro arquivo:\\n{}'.format(dados_1))
+print('\\nDados do segundo arquivo:\\n{}'.format(dados_2))
 ''',
                       '10m',
                       'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
-                      Colors.blueAccent,
+                      Colors.amber,
                       'Exercicio 4',
                       'Salve as posições do robô em um arquivo',
                       '',

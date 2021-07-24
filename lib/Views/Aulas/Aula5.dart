@@ -154,8 +154,8 @@ robot.unlock()
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '1m',
-                      'Facílimo',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
@@ -166,7 +166,7 @@ Aria_shutdown()#Desligando os motores
 from AriaPy import *
 import sys
  
-def posicao():	
+def posicao():
      if movimento == "esquerda":
  
      robot.lock()
@@ -241,8 +241,8 @@ robot.unlock()
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '1m',
-                      'Facílimo',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
@@ -250,9 +250,10 @@ Aria_shutdown()#Desligando os motores
                       'Exercicio 3',
                       'Crie um programa que possua uma função que mostre um percurso em círculo. Utilize um cálculo matemático para definir o ângulo em graus de orientação do robô (Por exemplo: 25 graus a cada 1 segundo) ',
                       '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
+                      '10m',
+                      'Médio',
+                      gabs: gabarito3(),
+                      bol: true,
                     ),
                     ProjectProgressCard(
                       Colors.blueAccent,
@@ -260,12 +261,12 @@ Aria_shutdown()#Desligando os motores
                       'Montar função que calcula área de uma circunferência',
 '''
 def area_do_círculo(raio):
-	pi = 3.1415
-	area = pi*raio**2
-	return area
+  pi = 3.1415
+  area = pi*raio**2
+  return area
 ''',
-                      '1m',
-                      'Facílimo',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     ProjectProgressCard(
@@ -274,30 +275,12 @@ def area_do_círculo(raio):
                       'Montar função que calcula Bhaskara',
 '''
 def bhaskara(a,b,c):
-	delta = (b**2)-(4*a*c)
-	raiz_1 = ((-b)+(delta)**(1/2))/(2*a)
-	raiz_2 = ((-b)-(delta)**(1/2))/(2*a)
-	return raiz_1, raiz_2
+  delta = (b**2)-(4*a*c)
+  raiz_1 = ((-b)+(delta)**(1/2))/(2*a)
+  raiz_2 = ((-b)-(delta)**(1/2))/(2*a)
+  return raiz_1, raiz_2
 ''',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.blueAccent,
-                      'Exercicio 6', 
-                      '',
-                      '',
-                      '1m',
-                      'Facílimo',
-                      bol: false,
-                    ),
-                    ProjectProgressCard(
-                      Colors.green,
-                      'Exercicio 7',
-                      '',
-                      '',
-                      '1m',
+                      '5m',
                       'Fácil',
                       bol: false,
                     ),

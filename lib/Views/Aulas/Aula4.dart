@@ -165,8 +165,8 @@ elif(numero_2>numero_1):
 else:
     print "O numero", numero_1, "e  o numero",numero_2,"sao iguais"
 ''',
-                      '1m',
-                      'Facílimo',
+                      '5m',
+                      'Fácil',
                       bol: false,
                     ),
                     ProjectProgressCard(
@@ -299,8 +299,8 @@ robot.unlock()
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '1m',
-                      'Facílimo',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     SizedBox(

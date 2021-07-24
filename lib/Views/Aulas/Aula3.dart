@@ -124,8 +124,8 @@ print ("Posição do robô usando ArPose: (", pose.x, ",", pose.y, ",", pose.th,
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '1m',
-                      'Facílimo',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     ProjectProgressCard(
@@ -260,8 +260,8 @@ robot.unlock()
 print ("Saindo.")
 Aria_shutdown()#Desligando os motores
 ''',
-                      '1m',
-                      'Facílimo',
+                      '10m',
+                      'Médio',
                       bol: false,
                     ),
                     SizedBox(
