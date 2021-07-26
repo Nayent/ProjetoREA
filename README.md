@@ -9,3 +9,7 @@ Quanto à este projeto REA, tem-se que ele é extensível, de modo que as aulas 
 <p align="justify">
 Por fim, agradecemos - primeiramente - nosso orientador Prof. Dr. Lucio Agostinho Rocha, que concedeu a oportunidade da realização deste projeto, auxiliando-nos na montagem das aulas, na elaboração dos exercícios e no aprendizado do simulador do robô. Agradecemos também aqueles em que se propuseram a realizar este curso e, esperamos ter ajudado cada um no aprendizado de Python!
 </p>
+
+<p align="justify">
+Para acessar o site, utilize o seguinte link: <a href="https://rea-python.web.app/">Projeto Rea</a>
+</p>
